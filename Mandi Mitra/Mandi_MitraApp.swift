@@ -25,7 +25,8 @@ struct Mandi_MitraApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ViewDetailedList()
+            ItemEntry()
         }
         .modelContainer(sharedModelContainer)
     }
