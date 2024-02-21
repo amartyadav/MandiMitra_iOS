@@ -16,6 +16,8 @@
 		B20CE3412B7B1D260015AF4C /* Mandi_MitraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */; };
 		B20CE3432B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */; };
 		B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE34F2B7B27750015AF4C /* ItemEntry.swift */; };
+		B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */; };
+		B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITests.swift; sourceTree = "<group>"; };
 		B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B20CE34F2B7B27750015AF4C /* ItemEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntry.swift; sourceTree = "<group>"; };
+		B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTotalCalculator.swift; sourceTree = "<group>"; };
+		B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +106,14 @@
 			children = (
 				B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */,
 				B20CE34F2B7B27750015AF4C /* ItemEntry.swift */,
+				B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */,
 				B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */,
 				B20CE3252B7B1D230015AF4C /* Item.swift */,
 				B20CE3272B7B1D260015AF4C /* Assets.xcassets */,
 				B20CE32C2B7B1D260015AF4C /* Mandi_Mitra.entitlements */,
 				B20CE32D2B7B1D260015AF4C /* Info.plist */,
 				B20CE3292B7B1D260015AF4C /* Preview Content */,
+				B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */,
 			);
 			path = "Mandi Mitra";
 			sourceTree = "<group>";
@@ -268,9 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20CE3242B7B1D230015AF4C /* ViewDetailedList.swift in Sources */,
+				B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */,
 				B20CE3262B7B1D230015AF4C /* Item.swift in Sources */,
 				B20CE3222B7B1D230015AF4C /* Mandi_MitraApp.swift in Sources */,
 				B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */,
+				B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

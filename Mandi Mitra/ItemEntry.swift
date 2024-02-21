@@ -8,29 +8,82 @@
 import SwiftUI
 
 struct ItemEntry: View {
-    @State var buyingItemRate: String = ""
-    @State var totalAmount: String = "0.0"
-    enum itemRateQuantity: String, CaseIterable, Identifiable {
+    // selling section (Enter Item Rate) section variables
+    /// The price at which the item is being sold (only the numerical value without the quantity of the rate)
+    @State var sellingItemPrice: String = ""
+    /// Enum for all the various quantities that the item is being sold in. For eg. "Rs. 12/paao or Rs. 12/kg"
+    enum sellingItemUnit: String, CaseIterable, Identifiable {
         case KG, Paao
         var id: Self {self}
     }
-    @State private var selectedSellingUnit: itemRateQuantity = .Paao
+    /// Holds the selected unit that the item is being sold in at the shop. For eg. "Paao" for an item of rate "Rs. 12/paao"
+    @State private var selectedSellingItemUnit: sellingItemUnit = .Paao
     
+    // ---------------------------------------
+    
+    // buying section (You Want To Buy) section variables
+    /// Enum for all the various quantities that the user can choose to buy for an item
     enum buyingQuantity: String, CaseIterable, Identifiable {
         case one_paao = "1 Paao", half_kg = "Half KG", three_paao = "3 Paao", one_kg = "1 KG", more_kg = "More KG"
         var id: Self {self}
     }
-    
+    /// The selected quantity that the suer wishes to buy for a particular item
     @State private var selectedBuyingQuantity: buyingQuantity = .one_paao
+    /// Holds the custom KG value if "More KG" is selected as the buying quantity
+    @State private var customKGQuantity: String = "0.0"
+    
+    // ---------------------------------------
+    
+    
+    // Total section variables
+    /// Stores the total amount to be paid for all the items added to the bill
+    @State var totalAmount: String = "0.0"
+    
+    // ---------------------------------------
+
+    // List to hold all the items added to the bill
+    /// Holds all the items added to the bill
+    @State private var itemsList: [ItemDetail] = []
     
     var body: some View {
         NavigationStack {
             ScrollView{
                 VStack {
                     
-                    ItemRateEntrySection(buyingItemRate: $buyingItemRate, selectedSellingUnit: $selectedSellingUnit)
+                    ItemRateEntrySection(sellingItemPrice: $sellingItemPrice, selectedSellingItemUnit: $selectedSellingItemUnit)
                                         
-                    BuyingSection(selectedBuyingQuantity: $selectedBuyingQuantity, buyingItemRate: $buyingItemRate)
+                    BuyingSection(
+                        totalAmount: $totalAmount,
+                        sellingItemPrice: $sellingItemPrice,
+                        selectedSellingUnit: $selectedSellingItemUnit,
+                        selectedBuyingQuantity: $selectedBuyingQuantity,
+                        customKGQuantity: $customKGQuantity,
+                        onAddItem: { price, unit, quantity, customQuantity, _ in
+                                // Calculate total cost using ItemTotalCalculator
+                                let totalCost = ItemTotalCalculator.calculateItemTotal(
+                                    price: price,
+                                    sellingQuantityUnitSelected: unit,
+                                    buyingQuantityUnitSelected: quantity,
+                                    customQuantity: customQuantity
+                                )
+                                
+                                // Create new item detail
+                                let newItem = ItemDetail(
+                                    sellingRate: "\(price)/\(unit.rawValue)",
+                                    buyingQuantity: quantity.rawValue,
+                                    totalAmount: String(totalCost),
+                                    customKGQuantity: customQuantity ?? "0"
+                                )
+                                
+                                // Append new item to the list
+                                itemsList.append(newItem)
+                            
+                            print(itemsList)
+                                
+                                // Optionally update total amount if needed
+                                // This depends on how you manage totalAmount in your app
+                        }
+                    )
 
                     TotalSection(totalAmount: $totalAmount)
                     
@@ -50,17 +103,29 @@ struct ItemEntry: View {
 
 }
 
-func addItemToList() -> Void {
-    print("Add Item to list clicked")
-}
+///// Function to add the Item to the itemsList: [ItemDetail] list.
+//func addItemToList(
+//    sellingItemPrice: String,
+//    selectedSellingItemUnit: ItemEntry.sellingItemUnit,
+//    selectedBuyingQuantity: String,
+//    customKGQuantity: String?,
+//    totalAmount: String
+//) -> Void {
+//    @Binding var itemsList: [ItemDetail]
+//    print("Add Item to list clicked")
+//    let sellingRate = sellingItemPrice + selectedSellingItemUnit.rawValue
+//    let newItem = ItemDetail(sellingRate: sellingRate, buyingQuantity: selectedBuyingQuantity, totalAmount: totalAmount, customKGQuantity: customKGQuantity)
+//    itemsList.append(newItem)
+//}
 
 #Preview {
     ItemEntry()
 }
 
+
 struct ItemRateEntrySection: View {
-    @Binding var buyingItemRate: String
-    @Binding var selectedSellingUnit: ItemEntry.itemRateQuantity
+    @Binding var sellingItemPrice: String
+    @Binding var selectedSellingItemUnit: ItemEntry.sellingItemUnit
     
     var body: some View {
         ZStack(alignment: .top)
@@ -83,7 +148,7 @@ struct ItemRateEntrySection: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 25, height: 20)
                                 .padding(.leading, 20)
-                            TextField("", text: $buyingItemRate)
+                            TextField("", text: $sellingItemPrice)
                                 .padding(.leading, 10)
                                 .frame(width: 100)
                                 .keyboardType(.decimalPad)
@@ -93,8 +158,8 @@ struct ItemRateEntrySection: View {
                         .multilineTextAlignment(.center)
                         
                         
-                        Picker("Unit", selection: $selectedSellingUnit) {
-                            ForEach(ItemEntry.itemRateQuantity.allCases) { unit in
+                        Picker("Unit", selection: $selectedSellingItemUnit) {
+                            ForEach(ItemEntry.sellingItemUnit.allCases) { unit in
                                 Text(unit.rawValue)
                             }
                         }.tint(Color.black)
@@ -118,8 +183,15 @@ struct ItemRateEntrySection: View {
 }
 
 struct BuyingSection: View {
+    @Binding var totalAmount: String
+    @Binding var sellingItemPrice: String
+    @Binding var selectedSellingUnit: ItemEntry.sellingItemUnit
     @Binding var selectedBuyingQuantity: ItemEntry.buyingQuantity
-    @Binding var buyingItemRate: String
+    @Binding var customKGQuantity: String
+    
+    // closure property
+    var onAddItem: (String, ItemEntry.sellingItemUnit, ItemEntry.buyingQuantity, String?, String) -> Void
+    
     var body: some View {
         // buying section
         ZStack(alignment: .top)
@@ -158,7 +230,7 @@ struct BuyingSection: View {
                 // More KG Input text field
                 if selectedBuyingQuantity == .more_kg {
                     HStack{
-                        TextField("More KG", text: $buyingItemRate)
+                        TextField("More KG", text: $customKGQuantity)
                             .textFieldStyle(.roundedBorder)
                             .padding()
                             .frame(width: 150)
@@ -168,8 +240,10 @@ struct BuyingSection: View {
                 HStack{
                     Spacer()
                     Button {
-                        addItemToList()
-                    } label: {
+                        onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalAmount)
+                        
+                    }
+                label: {
                         Label("Add To List", systemImage: "cart.badge.plus")
                             .font(.body)
                     }
@@ -192,6 +266,7 @@ struct BuyingSection: View {
 
 struct TotalSection: View {
     @Binding var totalAmount: String
+    
     var body: some View {
         ZStack(alignment: .top)
         {
@@ -203,7 +278,7 @@ struct TotalSection: View {
                 Text(totalAmount)
                 Spacer()
                 Button {
-                    addItemToList()
+                    
                 } label: {
                     Label("View Bill", systemImage: "cart.badge.plus")
                         .font(.body)
