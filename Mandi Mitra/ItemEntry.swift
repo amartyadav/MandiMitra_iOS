@@ -30,14 +30,16 @@ struct ItemEntry: View {
     /// The selected quantity that the suer wishes to buy for a particular item
     @State private var selectedBuyingQuantity: buyingQuantity = .one_paao
     /// Holds the custom KG value if "More KG" is selected as the buying quantity
-    @State private var customKGQuantity: String = "0.0"
+    @State private var customKGQuantity: String = ""
     
     // ---------------------------------------
     
     
-    // Total section variables
-    /// Stores the total amount to be paid for all the items added to the bill
-    @State var totalAmount: String = "0.0"
+    /// Stores the total amount to be paid for a item added to the bill
+    @State var totalItemAmount: String = "0.0"
+    
+    /// Stores the total bill amount
+    @State var totalBillAmount: String = "0.00"
     
     // ---------------------------------------
 
@@ -53,7 +55,7 @@ struct ItemEntry: View {
                     ItemRateEntrySection(sellingItemPrice: $sellingItemPrice, selectedSellingItemUnit: $selectedSellingItemUnit)
                                         
                     BuyingSection(
-                        totalAmount: $totalAmount,
+                        totalItemAmount: $totalItemAmount,
                         sellingItemPrice: $sellingItemPrice,
                         selectedSellingUnit: $selectedSellingItemUnit,
                         selectedBuyingQuantity: $selectedBuyingQuantity,
@@ -71,7 +73,7 @@ struct ItemEntry: View {
                                 let newItem = ItemDetail(
                                     sellingRate: "\(price)/\(unit.rawValue)",
                                     buyingQuantity: quantity.rawValue,
-                                    totalAmount: String(totalCost),
+                                    totalItemAmount: String(totalCost),
                                     customKGQuantity: customQuantity ?? "0"
                                 )
                                 
@@ -79,13 +81,19 @@ struct ItemEntry: View {
                                 itemsList.append(newItem)
                             
                             print(itemsList)
+                            
+                            if let currentTotal = Double(totalBillAmount) {
+                                let newTotal = currentTotal + totalCost
+                                totalBillAmount = String(format: "%.2f", newTotal)
+                            }
+                            
                                 
                                 // Optionally update total amount if needed
                                 // This depends on how you manage totalAmount in your app
                         }
                     )
 
-                    TotalSection(totalAmount: $totalAmount)
+                    TotalSection(totalBillAmount: $totalBillAmount, itemsList: $itemsList)
                     
                     Spacer()
 
@@ -103,22 +111,8 @@ struct ItemEntry: View {
 
 }
 
-///// Function to add the Item to the itemsList: [ItemDetail] list.
-//func addItemToList(
-//    sellingItemPrice: String,
-//    selectedSellingItemUnit: ItemEntry.sellingItemUnit,
-//    selectedBuyingQuantity: String,
-//    customKGQuantity: String?,
-//    totalAmount: String
-//) -> Void {
-//    @Binding var itemsList: [ItemDetail]
-//    print("Add Item to list clicked")
-//    let sellingRate = sellingItemPrice + selectedSellingItemUnit.rawValue
-//    let newItem = ItemDetail(sellingRate: sellingRate, buyingQuantity: selectedBuyingQuantity, totalAmount: totalAmount, customKGQuantity: customKGQuantity)
-//    itemsList.append(newItem)
-//}
-
 #Preview {
+    
     ItemEntry()
 }
 
@@ -176,18 +170,23 @@ struct ItemRateEntrySection: View {
             }
             .multilineTextAlignment(.center)
         }
-        .padding(EdgeInsets(top: 10, leading: 35, bottom: 0, trailing: 35))
+        .padding(EdgeInsets(top: 10, leading: 35, bottom: 20, trailing: 35))
         .frame(width: 450, height: 200)
 
     }
 }
 
 struct BuyingSection: View {
-    @Binding var totalAmount: String
+    @Binding var totalItemAmount: String
     @Binding var sellingItemPrice: String
     @Binding var selectedSellingUnit: ItemEntry.sellingItemUnit
     @Binding var selectedBuyingQuantity: ItemEntry.buyingQuantity
     @Binding var customKGQuantity: String
+    
+    // Add a computed property to determine the additional padding
+        var additionalPadding: CGFloat {
+            selectedBuyingQuantity == .more_kg ? 90 : 10 // Adjust the value as needed
+        }
     
     // closure property
     var onAddItem: (String, ItemEntry.sellingItemUnit, ItemEntry.buyingQuantity, String?, String) -> Void
@@ -231,16 +230,17 @@ struct BuyingSection: View {
                 if selectedBuyingQuantity == .more_kg {
                     HStack{
                         TextField("More KG", text: $customKGQuantity)
+                            .padding(.leading, 10)
+                            .frame(width: 100)
+                            .keyboardType(.decimalPad)
                             .textFieldStyle(.roundedBorder)
-                            .padding()
-                            .frame(width: 150)
                         Text("KG")
                     }
                 }
                 HStack{
                     Spacer()
                     Button {
-                        onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalAmount)
+                        onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalItemAmount)
                         
                     }
                 label: {
@@ -259,13 +259,14 @@ struct BuyingSection: View {
                  
             }
         }
-        .padding(EdgeInsets(top: 30, leading: 35, bottom: 0, trailing: 35))
+        .padding(EdgeInsets(top: additionalPadding, leading: 35, bottom: additionalPadding, trailing: 35))
         .frame(width: 450, height: 200)
     }
 }
 
 struct TotalSection: View {
-    @Binding var totalAmount: String
+    @Binding var totalBillAmount: String
+    @Binding var itemsList: [ItemDetail]
     
     var body: some View {
         ZStack(alignment: .top)
@@ -275,18 +276,16 @@ struct TotalSection: View {
                 .foregroundColor(Color(hex: "#ffffff"))
             HStack{
                 Text("Total: \u{20B9}")
-                Text(totalAmount)
+                Text(totalBillAmount)
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Label("View Bill", systemImage: "cart.badge.plus")
-                        .font(.body)
-                }
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                .background(Color.blue)
-                .foregroundColor(Color.white)
-                .cornerRadius(10)
+                NavigationLink(destination: ViewDetailedList(items: itemsList)) {
+                                    Label("View Bill", systemImage: "cart.badge.plus")
+                                        .font(.body)
+                                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                                        .background(Color.blue)
+                                        .foregroundColor(Color.white)
+                                        .cornerRadius(10)
+                                }
             }
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 10))
 

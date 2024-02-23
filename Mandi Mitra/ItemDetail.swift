@@ -11,6 +11,6 @@ struct ItemDetail: Identifiable {
     let id = UUID()
     var sellingRate: String
     var buyingQuantity: String
-    var totalAmount: String
+    var totalItemAmount: String
     var customKGQuantity: String?
 }

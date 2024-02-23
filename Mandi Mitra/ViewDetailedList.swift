@@ -9,53 +9,38 @@ import SwiftUI
 import SwiftData
 
 struct ViewDetailedList: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    var items: [ItemDetail]
+    
 
     var body: some View {
         NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
+                List(items, id: \.id) { item in
+                            VStack(alignment: .leading) {
+                                Text("Selling Rate: \(item.sellingRate)")
+                                Text("Buying Quantity: \(item.buyingQuantity)")
+                                Text("Total Item Amount: \(item.totalItemAmount)")
+                                // Display more details as needed
+                            }
+                        }.onAppear {
+                            printItemsList()
+                        }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    Label("Add Item", systemImage: "gear")
                 }
             }
+            .navigationTitle("Mandi Mitra")
         } detail: {
             Text("Select an item")
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+    
+    func printItemsList() {
+            for item in items {
+                print("Selling Rate: \(item.sellingRate), Buying Quantity: \(item.buyingQuantity), Total Item Amount: \(item.totalItemAmount)")
             }
         }
-    }
+
 }
 
-#Preview {
-    ViewDetailedList()
-        .modelContainer(for: Item.self, inMemory: true)
-}
+
