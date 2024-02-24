@@ -16,8 +16,12 @@
 		B20CE3412B7B1D260015AF4C /* Mandi_MitraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */; };
 		B20CE3432B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */; };
 		B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE34F2B7B27750015AF4C /* ItemEntry.swift */; };
+		B2428EFC2B89CD820020D3D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2428EFB2B89CD820020D3D1 /* Settings.swift */; };
+		B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2428EFD2B89CE240020D3D1 /* ContentView.swift */; };
+		B2428F002B8A12850020D3D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */; };
 		B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */; };
 		B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */; };
+		B2FDC2CA2B8A5B4800B8A6A4 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +56,12 @@
 		B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITests.swift; sourceTree = "<group>"; };
 		B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B20CE34F2B7B27750015AF4C /* ItemEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntry.swift; sourceTree = "<group>"; };
+		B2428EFB2B89CD820020D3D1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B2428EFD2B89CE240020D3D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTotalCalculator.swift; sourceTree = "<group>"; };
 		B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		B20CE3152B7B1D230015AF4C = {
 			isa = PBXGroup;
 			children = (
+				B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */,
 				B20CE3202B7B1D230015AF4C /* Mandi Mitra */,
 				B20CE3352B7B1D260015AF4C /* Mandi MitraTests */,
 				B20CE33F2B7B1D260015AF4C /* Mandi MitraUITests */,
@@ -106,6 +115,7 @@
 			children = (
 				B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */,
 				B20CE34F2B7B27750015AF4C /* ItemEntry.swift */,
+				B2428EFB2B89CD820020D3D1 /* Settings.swift */,
 				B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */,
 				B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */,
 				B20CE3252B7B1D230015AF4C /* Item.swift */,
@@ -114,6 +124,8 @@
 				B20CE32D2B7B1D260015AF4C /* Info.plist */,
 				B20CE3292B7B1D260015AF4C /* Preview Content */,
 				B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */,
+				B2428EFD2B89CE240020D3D1 /* ContentView.swift */,
+				B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */,
 			);
 			path = "Mandi Mitra";
 			sourceTree = "<group>";
@@ -229,6 +241,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hi,
 			);
 			mainGroup = B20CE3152B7B1D230015AF4C;
 			productRefGroup = B20CE31F2B7B1D230015AF4C /* Products */;
@@ -249,6 +262,7 @@
 			files = (
 				B20CE32B2B7B1D260015AF4C /* Preview Assets.xcassets in Resources */,
 				B20CE3282B7B1D260015AF4C /* Assets.xcassets in Resources */,
+				B2428F002B8A12850020D3D1 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,10 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FDC2CA2B8A5B4800B8A6A4 /* LanguageSelectionView.swift in Sources */,
 				B20CE3242B7B1D230015AF4C /* ViewDetailedList.swift in Sources */,
 				B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */,
+				B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */,
 				B20CE3262B7B1D230015AF4C /* Item.swift in Sources */,
 				B20CE3222B7B1D230015AF4C /* Mandi_MitraApp.swift in Sources */,
+				B2428EFC2B89CD820020D3D1 /* Settings.swift in Sources */,
 				B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */,
 				B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */,
 			);
@@ -447,11 +464,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mandi Mitra/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mandi Mitra";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				"INFOPLIST_KEY_NSHumanReadableCopyright[sdk=*]" = "2024 Amartya Yadav";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,9 +480,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-Mitra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -478,11 +501,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mandi Mitra/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mandi Mitra";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				"INFOPLIST_KEY_NSHumanReadableCopyright[sdk=*]" = "2024 Amartya Yadav";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,9 +517,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-Mitra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

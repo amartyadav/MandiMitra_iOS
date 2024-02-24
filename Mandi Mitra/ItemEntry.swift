@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ItemEntry: View {
     // selling section (Enter Item Rate) section variables
     /// The price at which the item is being sold (only the numerical value without the quantity of the rate)
@@ -100,11 +101,11 @@ struct ItemEntry: View {
                 }
             }                
             .background(Color(hex: "f2f2f7"))
-            .toolbar {
-                ToolbarItem {
-                    Label("Add Item", systemImage: "gear")
-                }
-            }
+//            .toolbar {
+//                ToolbarItem {
+//                    Label("Add Item", systemImage: "gear")
+//                }
+//            }
             .navigationTitle("Mandi Mitra")
         }
     }
@@ -244,12 +245,12 @@ struct BuyingSection: View {
                         
                     }
                 label: {
-                        Label("Add To List", systemImage: "cart.badge.plus")
+                        Label("Add To List", systemImage: "plus.circle")
                             .font(.body)
                     }
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
+//                    .background(Color.blue)
+//                    .foregroundColor(Color.white)
                     .cornerRadius(10)
                     
                 }
@@ -282,8 +283,8 @@ struct TotalSection: View {
                                     Label("View Bill", systemImage: "cart.badge.plus")
                                         .font(.body)
                                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                                        .background(Color.blue)
-                                        .foregroundColor(Color.white)
+//                                        .background(Color.blue)
+//                                        .foregroundColor(Color.white)
                                         .cornerRadius(10)
                                 }
             }
