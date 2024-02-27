@@ -99,14 +99,29 @@ struct ItemEntry: View {
                     Spacer()
 
                 }
-            }                
-            .background(Color(hex: "f2f2f7"))
+            }     
+            .padding(.top, 20) // Adjust the value to create desired space
+
+            .background(Color(hex: "f3fbee"))
 //            .toolbar {
 //                ToolbarItem {
 //                    Label("Add Item", systemImage: "gear")
 //                }
 //            }
-            .navigationTitle("Mandi Mitra")
+//            .navigationTitle("Mandi Mitra")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                            HStack {
+                                Image("final_app_icon") // Replace "appIcon" with your actual icon name
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 50, height: 50)
+                                Text("Mandi Mitra")
+                                    .font(.largeTitle)
+                            }
+                        }
+                    }
+            
         }
     }
 
@@ -127,28 +142,32 @@ struct ItemRateEntrySection: View {
         {
             
             RoundedRectangle(cornerRadius: 10.0, style: .continuous)
-                    .foregroundColor(Color(hex: "#ffffff"))
+                .foregroundColor(Color.mandiMitraPrimary)
+                .shadow(radius: 3)
             VStack{
                 HStack{
                     Text("Enter Item Rate")
                         .padding(EdgeInsets(top: 20, leading: 20, bottom: 30, trailing: 15))
                         .font(.title2)
+                        .foregroundColor(Color.mandiMitraText)
                     Spacer()
                 }
                 HStack{
                     Group{
                         Group{
-                            Image("ruppee_icon")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 25, height: 20)
-                                .padding(.leading, 20)
-                            TextField("", text: $sellingItemPrice)
+                            if !sellingItemPrice.isEmpty {
+                                        Image("ruppee_icon")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 25, height: 20)
+                                            .padding(.leading, 20)
+                                    }
+                            TextField("₹", text: $sellingItemPrice)
                                 .padding(.leading, 10)
                                 .frame(width: 100)
                                 .keyboardType(.decimalPad)
+                                .foregroundColor(Color.mandiMitraText)
                         }
-                        .textFieldStyle(.roundedBorder)
                         .font(Font.system(size: 40, design: .default))
                         .multilineTextAlignment(.center)
                         
@@ -156,6 +175,7 @@ struct ItemRateEntrySection: View {
                         Picker("Unit", selection: $selectedSellingItemUnit) {
                             ForEach(ItemEntry.sellingItemUnit.allCases) { unit in
                                 Text(unit.rawValue)
+                                    .foregroundColor(Color.mandiMitraText)
                             }
                         }.tint(Color.black)
                         .onTapGesture {
@@ -198,21 +218,27 @@ struct BuyingSection: View {
         {
             
             RoundedRectangle(cornerRadius: 10.0, style: .continuous)
-                    .foregroundColor(Color(hex: "#ffffff"))
+                .foregroundColor(Color.mandiMitraPrimary)
+                .shadow(radius: 3)
             VStack{
                 HStack{
                     Text("You Want To Buy")
                         .padding(EdgeInsets(top: 20, leading: 20, bottom: 30, trailing: 15))
                         .font(.title2)
+                        .foregroundColor(Color.mandiMitraText)
                     Spacer()
                 }
                 HStack{
                         HStack{
                             Text("Desired Quantity")
                                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                                .foregroundColor(Color.mandiMitraText)
+
                             Picker("Unit", selection: $selectedBuyingQuantity) {
                                 ForEach(ItemEntry.buyingQuantity.allCases) { unit in
                                     Text(unit.rawValue)
+                                        .foregroundColor(Color.mandiMitraText)
+
                                 }
                             }.tint(Color.black)
                             .onTapGesture {
@@ -221,6 +247,7 @@ struct BuyingSection: View {
                             .onChange(of: selectedBuyingQuantity) { newValue in
                                 if newValue == .more_kg {
                                     print("More KG selected")
+                                    
                                 }
                             }
                         }
@@ -235,7 +262,12 @@ struct BuyingSection: View {
                             .frame(width: 100)
                             .keyboardType(.decimalPad)
                             .textFieldStyle(.roundedBorder)
+                            .background(Color.mandiMitraPrimary)
+                            .foregroundColor(Color.mandiMitraText)
+
                         Text("KG")
+                            .foregroundColor(Color.mandiMitraText)
+
                     }
                 }
                 HStack{
@@ -247,6 +279,7 @@ struct BuyingSection: View {
                 label: {
                         Label("Add To List", systemImage: "plus.circle")
                             .font(.body)
+                            .foregroundColor(Color.mandiMitraActionableButtons)
                     }
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
 //                    .background(Color.blue)
@@ -274,17 +307,19 @@ struct TotalSection: View {
         {
             
             RoundedRectangle(cornerRadius: 10.0, style: .continuous)
-                .foregroundColor(Color(hex: "#ffffff"))
+                .foregroundColor(Color.mandiMitraPrimary)
+                .shadow(radius: 3)
             HStack{
                 Text("Total: \u{20B9}")
+                    .foregroundColor(Color.mandiMitraText)
                 Text(totalBillAmount)
+                    .foregroundColor(Color.mandiMitraText)
                 Spacer()
                 NavigationLink(destination: ViewDetailedList(items: itemsList)) {
                                     Label("View Bill", systemImage: "cart.badge.plus")
                                         .font(.body)
                                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-//                                        .background(Color.blue)
-//                                        .foregroundColor(Color.white)
+                                        .foregroundColor(Color.mandiMitraActionableButtons)
                                         .cornerRadius(10)
                                 }
             }
@@ -297,21 +332,6 @@ struct TotalSection: View {
     }
 }
 
-extension Color {
-    init(hex: String) {
-        var cleanHexCode = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        cleanHexCode = cleanHexCode.replacingOccurrences(of: "#", with: "")
-        print(cleanHexCode)
-        var rgb: UInt64 = 0
-        
-        Scanner(string: cleanHexCode).scanHexInt64(&rgb)
-        
-        let redValue = Double((rgb >> 16) & 0xFF) / 255.0
-        let greenValue = Double((rgb >> 8) & 0xFF) / 255.0
-        let blueValue = Double(rgb & 0xFF) / 255.0
-        self.init(red: redValue, green: greenValue, blue: blueValue)
-    }
-}
 
 #if canImport(UIKit)
 extension View {
