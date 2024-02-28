@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingWelcomeAndName = UserDefaults.standard.string(forKey: "userName") == nil
     var body: some View {
-        TabView {
-            ItemEntry()
-                .tabItem { Label("Item Entry", systemImage: "list.bullet") }
-            
-            Settings()
-                .tabItem({
-                    Label("About", systemImage: "info.circle")
-                })
+        if showingWelcomeAndName {
+            WelcomeAndName(showingWelcomeAndName: $showingWelcomeAndName)
         }
+        else {
+            TabView {
+                ItemEntry()
+                    .tabItem { Label("Item Entry", systemImage: "list.bullet") }
+                
+                Settings()
+                    .tabItem({
+                        Label("About", systemImage: "info.circle")
+                    })
+            }
+        }
+        
     }
 }
 
@@ -42,7 +49,7 @@ extension Color {
 }
 
 extension Color {
-    static let mandiMitraPrimary = Color(hex: "8cce8e")
+    static let mandiMitraPrimary = Color(hex: "f3fbee")
     static let mandiMitraText = Color(hex: "274029")
     static let mandiMitraOnPrimary = Color.white
     static let mandiMitraActionableButtons = Color(hex: "313b72")

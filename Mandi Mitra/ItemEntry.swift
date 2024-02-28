@@ -9,6 +9,11 @@ import SwiftUI
 
 
 struct ItemEntry: View {
+//    init() {
+//        UINavigationBar.appearance().backgroundColor = UIColor.systemBlue
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+//    }
     // selling section (Enter Item Rate) section variables
     /// The price at which the item is being sold (only the numerical value without the quantity of the rate)
     @State var sellingItemPrice: String = ""
@@ -49,66 +54,78 @@ struct ItemEntry: View {
     @State private var itemsList: [ItemDetail] = []
     
     var body: some View {
+
         NavigationStack {
+            Divider()
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 10, trailing: 0))
             ScrollView{
                 VStack {
+                    HStack{
+                        Text("Hello, \(UserDefaults.standard.string(forKey: "userName") ?? "Guest") !")
+                            .font(.title)
+                            .padding(.leading, 20)
+                        Spacer()
+                    }
                     
-                    ItemRateEntrySection(sellingItemPrice: $sellingItemPrice, selectedSellingItemUnit: $selectedSellingItemUnit)
+                    GeometryReader { geometry in
+                        HStack(spacing: 8) {
+                            ItemRateEntrySection(sellingItemPrice: $sellingItemPrice, selectedSellingItemUnit: $selectedSellingItemUnit)
+                                .frame(width: geometry.size.width * 0.5 - 4) // Half width minus half spacing
+
+                            BuyingSection(
+                                totalItemAmount: $totalItemAmount,
+                                sellingItemPrice: $sellingItemPrice,
+                                selectedSellingUnit: $selectedSellingItemUnit,
+                                selectedBuyingQuantity: $selectedBuyingQuantity,
+                                customKGQuantity: $customKGQuantity,
+                                onAddItem: { price, unit, quantity, customQuantity, _ in
+                                        // Calculate total cost using ItemTotalCalculator
+                                        let totalCost = ItemTotalCalculator.calculateItemTotal(
+                                            price: price,
+                                            sellingQuantityUnitSelected: unit,
+                                            buyingQuantityUnitSelected: quantity,
+                                            customQuantity: customQuantity
+                                        )
                                         
-                    BuyingSection(
-                        totalItemAmount: $totalItemAmount,
-                        sellingItemPrice: $sellingItemPrice,
-                        selectedSellingUnit: $selectedSellingItemUnit,
-                        selectedBuyingQuantity: $selectedBuyingQuantity,
-                        customKGQuantity: $customKGQuantity,
-                        onAddItem: { price, unit, quantity, customQuantity, _ in
-                                // Calculate total cost using ItemTotalCalculator
-                                let totalCost = ItemTotalCalculator.calculateItemTotal(
-                                    price: price,
-                                    sellingQuantityUnitSelected: unit,
-                                    buyingQuantityUnitSelected: quantity,
-                                    customQuantity: customQuantity
-                                )
-                                
-                                // Create new item detail
-                                let newItem = ItemDetail(
-                                    sellingRate: "\(price)/\(unit.rawValue)",
-                                    buyingQuantity: quantity.rawValue,
-                                    totalItemAmount: String(totalCost),
-                                    customKGQuantity: customQuantity ?? "0"
-                                )
-                                
-                                // Append new item to the list
-                                itemsList.append(newItem)
-                            
-                            print(itemsList)
-                            
-                            if let currentTotal = Double(totalBillAmount) {
-                                let newTotal = currentTotal + totalCost
-                                totalBillAmount = String(format: "%.2f", newTotal)
-                            }
-                            
-                                
-                                // Optionally update total amount if needed
-                                // This depends on how you manage totalAmount in your app
+                                        // Create new item detail
+                                        let newItem = ItemDetail(
+                                            sellingRate: "\(price)/\(unit.rawValue)",
+                                            buyingQuantity: quantity.rawValue,
+                                            totalItemAmount: String(totalCost),
+                                            customKGQuantity: customQuantity ?? "0"
+                                        )
+                                        
+                                        // Append new item to the list
+                                        itemsList.append(newItem)
+                                    
+                                    print(itemsList)
+                                    
+                                    if let currentTotal = Double(totalBillAmount) {
+                                        let newTotal = currentTotal + totalCost
+                                        totalBillAmount = String(format: "%.2f", newTotal)
+                                    }
+                                }
+                            )
+                            .frame(width: geometry.size.width * 0.5 - 4) // Half width minus half spacing
+
                         }
-                    )
+                        .frame(height: 180) // Set a fixed height for your HStack
+                    }
+                    .padding(.top, 10)
+                    .frame(height: 180) // Ensure GeometryReader has a defined height
 
                     TotalSection(totalBillAmount: $totalBillAmount, itemsList: $itemsList)
+                            .padding(.horizontal) // Adds padding to the sides for the total section
+                            .padding(.top, 25)
+                        
                     
-                    Spacer()
+//                    Spacer()
 
                 }
             }     
             .padding(.top, 20) // Adjust the value to create desired space
 
-            .background(Color(hex: "f3fbee"))
-//            .toolbar {
-//                ToolbarItem {
-//                    Label("Add Item", systemImage: "gear")
-//                }
-//            }
-//            .navigationTitle("Mandi Mitra")
+            .background(Color.white)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                             HStack {
@@ -143,56 +160,47 @@ struct ItemRateEntrySection: View {
             
             RoundedRectangle(cornerRadius: 10.0, style: .continuous)
                 .foregroundColor(Color.mandiMitraPrimary)
-                .shadow(radius: 3)
+//                .shadow(radius: 3)
             VStack{
                 HStack{
                     Text("Enter Item Rate")
-                        .padding(EdgeInsets(top: 20, leading: 20, bottom: 30, trailing: 15))
-                        .font(.title2)
+                        .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+                        .font(.body)
                         .foregroundColor(Color.mandiMitraText)
-                    Spacer()
                 }
                 HStack{
-                    Group{
                         Group{
                             if !sellingItemPrice.isEmpty {
                                         Image("ruppee_icon")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .frame(width: 25, height: 20)
-                                            .padding(.leading, 20)
+//                                            .padding(.leading, 20)
                                     }
                             TextField("₹", text: $sellingItemPrice)
-                                .padding(.leading, 10)
+//                                .padding(.leading, 10)
                                 .frame(width: 100)
                                 .keyboardType(.decimalPad)
                                 .foregroundColor(Color.mandiMitraText)
                         }
                         .font(Font.system(size: 40, design: .default))
                         .multilineTextAlignment(.center)
-                        
-                        
-                        Picker("Unit", selection: $selectedSellingItemUnit) {
-                            ForEach(ItemEntry.sellingItemUnit.allCases) { unit in
-                                Text(unit.rawValue)
-                                    .foregroundColor(Color.mandiMitraText)
-                            }
-                        }.tint(Color.black)
-                        .onTapGesture {
-                                hideKeyboard()
-                        }
-                        
+                }
+                Picker("Unit", selection: $selectedSellingItemUnit) {
+                    ForEach(ItemEntry.sellingItemUnit.allCases) { unit in
+                        Text(unit.rawValue)
+                            .foregroundColor(Color.mandiMitraText)
                     }
-                    
-                    
-                    
-                    Spacer()
+                }.tint(Color.black)
+                .onTapGesture {
+                        hideKeyboard()
                 }
             }
             .multilineTextAlignment(.center)
-        }
-        .padding(EdgeInsets(top: 10, leading: 35, bottom: 20, trailing: 35))
-        .frame(width: 450, height: 200)
+        }        
+        .padding(.leading, 20) // Add desired padding value here
+
+//        .frame(width: 170, height: 180)
 
     }
 }
@@ -219,21 +227,14 @@ struct BuyingSection: View {
             
             RoundedRectangle(cornerRadius: 10.0, style: .continuous)
                 .foregroundColor(Color.mandiMitraPrimary)
-                .shadow(radius: 3)
             VStack{
                 HStack{
                     Text("You Want To Buy")
-                        .padding(EdgeInsets(top: 20, leading: 20, bottom: 30, trailing: 15))
-                        .font(.title2)
+                        .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 15))
+                        .font(.body)
                         .foregroundColor(Color.mandiMitraText)
-                    Spacer()
                 }
-                HStack{
                         HStack{
-                            Text("Desired Quantity")
-                                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                                .foregroundColor(Color.mandiMitraText)
-
                             Picker("Unit", selection: $selectedBuyingQuantity) {
                                 ForEach(ItemEntry.buyingQuantity.allCases) { unit in
                                     Text(unit.rawValue)
@@ -251,8 +252,7 @@ struct BuyingSection: View {
                                 }
                             }
                         }
-                    Spacer()
-                }
+                
                 
                 // More KG Input text field
                 if selectedBuyingQuantity == .more_kg {
@@ -270,31 +270,25 @@ struct BuyingSection: View {
 
                     }
                 }
-                HStack{
-                    Spacer()
-                    Button {
-                        onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalItemAmount)
-                        
-                    }
-                label: {
-                        Label("Add To List", systemImage: "plus.circle")
-                            .font(.body)
-                            .foregroundColor(Color.mandiMitraActionableButtons)
-                    }
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-//                    .background(Color.blue)
-//                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    
+                
+                Button {
+                    onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalItemAmount)
+                    sellingItemPrice = ""
+                }
+            label: {
+                    Label("Add To List", systemImage: "plus.circle")
+                        .font(.body)
+                        .foregroundColor(Color.mandiMitraActionableButtons)
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                .cornerRadius(10)
                 
 
                  
             }
         }
-        .padding(EdgeInsets(top: additionalPadding, leading: 35, bottom: additionalPadding, trailing: 35))
-        .frame(width: 450, height: 200)
+
+        .padding(.trailing, 20)
     }
 }
 
@@ -308,7 +302,7 @@ struct TotalSection: View {
             
             RoundedRectangle(cornerRadius: 10.0, style: .continuous)
                 .foregroundColor(Color.mandiMitraPrimary)
-                .shadow(radius: 3)
+//                .shadow(radius: 3)
             HStack{
                 Text("Total: \u{20B9}")
                     .foregroundColor(Color.mandiMitraText)
@@ -326,8 +320,7 @@ struct TotalSection: View {
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 10))
 
         }
-        .padding(EdgeInsets(top: 30, leading: 35, bottom: 0, trailing: 35))
-        .frame(width: 450, height: 100)
+//        .padding(EdgeInsets(top: 30, leading: 35, bottom: 0, trailing: 35))
 
     }
 }

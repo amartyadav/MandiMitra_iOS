@@ -66,7 +66,11 @@
         }
       }
     },
+    "Continue" : {
+
+    },
     "Desired Quantity" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -98,6 +102,9 @@
         }
       }
     },
+    "Enter your name" : {
+
+    },
     "enter_item_rate" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -114,6 +121,9 @@
           }
         }
       }
+    },
+    "Hello, %@ !" : {
+
     },
     "Item Entry" : {
       "localizations" : {

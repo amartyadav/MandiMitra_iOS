@@ -1,3 +1,4 @@
+
 //
 //  WelcomeAndName.swift
 //  Mandi Mitra
@@ -8,11 +9,20 @@
 import SwiftUI
 
 struct WelcomeAndName: View {
+    @Binding var showingWelcomeAndName: Bool
+    @State private var userName: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        VStack {
+                    TextField("Enter your name", text: $userName)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
 
-#Preview {
-    WelcomeAndName()
+                    Button("Continue") {
+                        UserDefaults.standard.set(userName, forKey: "userName")
+                        showingWelcomeAndName = false
+                    }
+                    .disabled(userName.isEmpty)
+                }
+                .padding()    }
 }
