@@ -57,7 +57,7 @@ struct ItemEntry: View {
 
         NavigationStack {
             Divider()
-                .padding(EdgeInsets(top: 20, leading: 0, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
             ScrollView{
                 VStack {
                     HStack{
@@ -123,7 +123,7 @@ struct ItemEntry: View {
 
                 }
             }     
-            .padding(.top, 20) // Adjust the value to create desired space
+            .padding(.top, 10) // Adjust the value to create desired space
 
             .background(Color.white)
             .toolbar {
@@ -134,7 +134,7 @@ struct ItemEntry: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 50, height: 50)
                                 Text("Mandi Mitra")
-                                    .font(.largeTitle)
+                                    .font(.title)
                             }
                         }
                     }
