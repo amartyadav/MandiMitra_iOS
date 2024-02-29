@@ -61,7 +61,7 @@ struct ItemEntry: View {
             ScrollView{
                 VStack {
                     HStack{
-                        Text("Hello, \(UserDefaults.standard.string(forKey: "userName") ?? "Guest") !")
+                        Text("Hello, \(UserDefaults.standard.string(forKey: "userName") ?? "Guest")")
                             .font(.title)
                             .padding(.leading, 20)
                         Spacer()
@@ -309,7 +309,7 @@ struct TotalSection: View {
                 Text(totalBillAmount)
                     .foregroundColor(Color.mandiMitraText)
                 Spacer()
-                NavigationLink(destination: ViewDetailedList(items: itemsList)) {
+                NavigationLink(destination: ViewDetailedList(items: itemsList, totalBillAmount: totalBillAmount)) {
                                     Label("View Bill", systemImage: "cart.badge.plus")
                                         .font(.body)
                                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
