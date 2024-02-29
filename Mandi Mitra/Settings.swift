@@ -13,7 +13,7 @@ struct Settings: View {
             SettingOption(title: "Rate Us on the App Store", iconName: "star.fill"),
             SettingOption(title: "Release Notes", iconName: "doc.plaintext"),
             SettingOption(title: "View Website", iconName: "network"),
-            SettingOption(title: "Notifications", iconName: "bell.fill"),
+//            SettingOption(title: "Notifications", iconName: "bell.fill"),
             SettingOption(title: "Privacy Policy", iconName: "lock.fill")
         ]
     
@@ -33,11 +33,15 @@ struct Settings: View {
                         .padding(.vertical, 8)
     //                    Divider()
                     }
+                    .background(Color.white) // Set the background color of the NavigationStack
+                    
                     
                 }
+                .listStyle(PlainListStyle()) // Use PlainListStyle for more control over appearance
+                .background(Color.white) // Set the background color of the NavigationStack
             .navigationTitle("About")
 
-        }            
+        }
 
     }
 }
@@ -54,6 +58,11 @@ func performAction(for option: SettingOption) {
         }
     case "View Website":
         if let url = URL(string: "https://amartyadav.tech/projects") {
+            UIApplication.shared.open(url)
+        }
+        
+    case "Release Notes":
+        if let url = URL(string: "https://aatmamartya.notion.site/Mandi-Mitra-Release-Notes-iOS-d0ebda548533482c9fbda9692a28e8a2?pvs=4") {
             UIApplication.shared.open(url)
         }
     default:
