@@ -19,6 +19,7 @@
 
     },
     "Add Item" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -50,7 +51,14 @@
         }
       }
     },
+    "Bill Details" : {
+
+    },
+    "Buying Quantity: " : {
+
+    },
     "Buying Quantity: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -122,7 +130,7 @@
         }
       }
     },
-    "Hello, %@ !" : {
+    "Hello, %@" : {
 
     },
     "Item Entry" : {
@@ -190,6 +198,7 @@
       }
     },
     "Select an item" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -205,7 +214,11 @@
         }
       }
     },
+    "Selling Rate: " : {
+
+    },
     "Selling Rate: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -238,7 +251,11 @@
         }
       }
     },
+    "Total Item Amount: " : {
+
+    },
     "Total Item Amount: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
