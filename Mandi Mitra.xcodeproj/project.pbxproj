@@ -21,6 +21,10 @@
 		B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2428EFD2B89CE240020D3D1 /* ContentView.swift */; };
 		B2428F002B8A12850020D3D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */; };
 		B25D5AEC2B919D8E00E5FAA8 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D5AEB2B919D8E00E5FAA8 /* BannerAdView.swift */; };
+		B26B64DE2B921602002B7A3D /* ItemRateEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */; };
+		B26B64E02B92163E002B7A3D /* BuyingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64DF2B92163E002B7A3D /* BuyingSection.swift */; };
+		B26B64E22B921662002B7A3D /* TotalSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64E12B921662002B7A3D /* TotalSection.swift */; };
+		B26B64E42B9216A6002B7A3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64E32B9216A6002B7A3D /* Extensions.swift */; };
 		B28706E32B8F2ABE008B42FE /* WelcomeAndName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28706E22B8F2ABE008B42FE /* WelcomeAndName.swift */; };
 		B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */; };
 		B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */; };
@@ -65,6 +69,10 @@
 		B2428EFD2B89CE240020D3D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B25D5AEB2B919D8E00E5FAA8 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRateEntry.swift; sourceTree = "<group>"; };
+		B26B64DF2B92163E002B7A3D /* BuyingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingSection.swift; sourceTree = "<group>"; };
+		B26B64E12B921662002B7A3D /* TotalSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSection.swift; sourceTree = "<group>"; };
+		B26B64E32B9216A6002B7A3D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B28706E22B8F2ABE008B42FE /* WelcomeAndName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAndName.swift; sourceTree = "<group>"; };
 		B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTotalCalculator.swift; sourceTree = "<group>"; };
 		B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
@@ -141,21 +149,14 @@
 		B20CE3202B7B1D230015AF4C /* Mandi Mitra */ = {
 			isa = PBXGroup;
 			children = (
+				B26B64DC2B921590002B7A3D /* Utilities */,
+				B26B64DA2B921536002B7A3D /* Views */,
+				B26B64D92B921510002B7A3D /* Models */,
 				B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */,
-				B25D5AEB2B919D8E00E5FAA8 /* BannerAdView.swift */,
-				B20CE34F2B7B27750015AF4C /* ItemEntry.swift */,
-				B28706E22B8F2ABE008B42FE /* WelcomeAndName.swift */,
-				B2428EFB2B89CD820020D3D1 /* Settings.swift */,
-				B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */,
-				B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */,
-				B20CE3252B7B1D230015AF4C /* Item.swift */,
 				B20CE3272B7B1D260015AF4C /* Assets.xcassets */,
 				B20CE32C2B7B1D260015AF4C /* Mandi_Mitra.entitlements */,
 				B20CE32D2B7B1D260015AF4C /* Info.plist */,
 				B20CE3292B7B1D260015AF4C /* Preview Content */,
-				B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */,
-				B2428EFD2B89CE240020D3D1 /* ContentView.swift */,
-				B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */,
 			);
 			path = "Mandi Mitra";
 			sourceTree = "<group>";
@@ -183,6 +184,49 @@
 				B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */,
 			);
 			path = "Mandi MitraUITests";
+			sourceTree = "<group>";
+		};
+		B26B64D92B921510002B7A3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE3252B7B1D230015AF4C /* Item.swift */,
+				B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B26B64DA2B921536002B7A3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */,
+				B2428EFB2B89CD820020D3D1 /* Settings.swift */,
+				B28706E22B8F2ABE008B42FE /* WelcomeAndName.swift */,
+				B25D5AEB2B919D8E00E5FAA8 /* BannerAdView.swift */,
+				B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */,
+				B26B64DB2B921554002B7A3D /* ItemEntry */,
+				B2428EFD2B89CE240020D3D1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B26B64DB2B921554002B7A3D /* ItemEntry */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE34F2B7B27750015AF4C /* ItemEntry.swift */,
+				B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */,
+				B26B64DF2B92163E002B7A3D /* BuyingSection.swift */,
+				B26B64E12B921662002B7A3D /* TotalSection.swift */,
+			);
+			path = ItemEntry;
+			sourceTree = "<group>";
+		};
+		B26B64DC2B921590002B7A3D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */,
+				B26B64E32B9216A6002B7A3D /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,14 +389,18 @@
 			files = (
 				B2FDC2CA2B8A5B4800B8A6A4 /* LanguageSelectionView.swift in Sources */,
 				B20CE3242B7B1D230015AF4C /* ViewDetailedList.swift in Sources */,
+				B26B64E22B921662002B7A3D /* TotalSection.swift in Sources */,
 				B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */,
+				B26B64DE2B921602002B7A3D /* ItemRateEntry.swift in Sources */,
 				B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */,
 				B20CE3262B7B1D230015AF4C /* Item.swift in Sources */,
 				B20CE3222B7B1D230015AF4C /* Mandi_MitraApp.swift in Sources */,
 				B25D5AEC2B919D8E00E5FAA8 /* BannerAdView.swift in Sources */,
 				B2428EFC2B89CD820020D3D1 /* Settings.swift in Sources */,
+				B26B64E42B9216A6002B7A3D /* Extensions.swift in Sources */,
 				B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */,
 				B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */,
+				B26B64E02B92163E002B7A3D /* BuyingSection.swift in Sources */,
 				B28706E32B8F2ABE008B42FE /* WelcomeAndName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,36 +1,13 @@
 //
-//  ContentView.swift
+//  Extensions.swift
 //  Mandi Mitra
 //
-//  Created by Amartya Yadav on 24/02/24.
+//  Created by Amartya Yadav on 01/03/24.
 //
 
+import Foundation
 import SwiftUI
 
-struct ContentView: View {
-    @State private var showingWelcomeAndName = UserDefaults.standard.string(forKey: "userName") == nil
-    var body: some View {
-        if showingWelcomeAndName {
-            WelcomeAndName(showingWelcomeAndName: $showingWelcomeAndName)
-        }
-        else {
-            TabView {
-                ItemEntry()
-                    .tabItem { Label("Item Entry", systemImage: "list.bullet") }
-                
-                Settings()
-                    .tabItem({
-                        Label("About", systemImage: "info.circle")
-                    })
-            }
-        }
-        
-    }
-}
-
-#Preview {
-    ContentView()
-}
 
 extension Color {
     init(hex: String) {
@@ -66,3 +43,11 @@ extension Color {
     static let mandiMitraDarkError = Color(hex: "0xFFE57373")
     static let mandiMitraDarkOnError = Color.black
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
