@@ -10,7 +10,7 @@ import SwiftUI
 struct Settings: View {
     let settingsOptions: [SettingOption] = [
 //            SettingOption(title: "Language", iconName: "globe"),
-            SettingOption(title: "Rate Us on the App Store", iconName: "star.fill"),
+//            SettingOption(title: "Rate Us on the App Store", iconName: "star.fill"),
             SettingOption(title: "Release Notes", iconName: "doc.plaintext"),
             SettingOption(title: "View Website", iconName: "network"),
 //            SettingOption(title: "Notifications", iconName: "bell.fill"),
@@ -60,8 +60,8 @@ func performAction(for option: SettingOption) {
         if let url = URL(string: "https://apps.apple.com/in/app/google-chrome/id535886823") {
             UIApplication.shared.open(url)
         }
-    case "View Website":
-        if let url = URL(string: "https://amartyadav.tech/projects") {
+    case "View Developer's Website":
+        if let url = URL(string: "https://amartyadav.tech/") {
             UIApplication.shared.open(url)
         }
         
@@ -69,6 +69,12 @@ func performAction(for option: SettingOption) {
         if let url = URL(string: "https://aatmamartya.notion.site/Mandi-Mitra-Release-Notes-iOS-d0ebda548533482c9fbda9692a28e8a2?pvs=4") {
             UIApplication.shared.open(url)
         }
+        
+    case "Privacy Policy":
+        if let url = URL(string: "https://docs.google.com/document/d/1xjscbL1W_GOkL2C4xp_o-ILJhdr_hRq5iTRiOJVcN9w/edit?usp=sharing") {
+            UIApplication.shared.open(url)
+        }
+        
     default:
         break
     }
