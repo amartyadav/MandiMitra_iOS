@@ -31,9 +31,16 @@ struct ViewDetailedList: View {
                                         .font(.body)
                                         .foregroundColor(Color.mandiMitraText)
                                     Spacer()
-                                    Text(item.buyingQuantity)
-                                        .font(.body)
-                                        .foregroundColor(Color.mandiMitraText)
+                                    if(item.buyingQuantity == "More KG") {
+                                        Text((item.customKGQuantity ?? "") + " KG")
+                                            .font(.body)
+                                            .foregroundColor(Color.mandiMitraText)
+                                    }
+                                    else {
+                                        Text(item.buyingQuantity)
+                                            .font(.body)
+                                            .foregroundColor(Color.mandiMitraText)
+                                    }
                                 }
                                 HStack{
                                     Text("Total Item Amount: ")
@@ -78,6 +85,10 @@ struct ViewDetailedList: View {
                         
                     }
                 }
+        
+        BannerAdView()
+            .frame(width: 400, height: 50, alignment: .center)
+            .background(Color.white)
 
     }
     

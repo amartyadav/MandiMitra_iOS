@@ -7,26 +7,18 @@
 
 import SwiftUI
 import SwiftData
+import GoogleMobileAds
 
 @main
 struct Mandi_MitraApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    init() {
+        // initialise Google ADMob SDK
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
     }
 }

@@ -40,6 +40,10 @@ struct Settings: View {
                 .listStyle(PlainListStyle()) // Use PlainListStyle for more control over appearance
                 .background(Color.white) // Set the background color of the NavigationStack
             .navigationTitle("About")
+            
+            BannerAdView()
+                .frame(width: 400, height: 50, alignment: .center)
+                .background(Color.white)
 
         }
 

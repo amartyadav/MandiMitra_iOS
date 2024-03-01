@@ -114,12 +114,17 @@ struct ItemEntry: View {
                     .padding(.top, 10)
                     .frame(height: 180) // Ensure GeometryReader has a defined height
 
+                    
                     TotalSection(totalBillAmount: $totalBillAmount, itemsList: $itemsList)
                             .padding(.horizontal) // Adds padding to the sides for the total section
                             .padding(.top, 25)
                         
                     
-//                    Spacer()
+                    Spacer()
+                    
+                    BannerAdView()
+                        .frame(width: 400, height: 50, alignment: .center)
+                        .background(Color.white)
 
                 }
             }     
