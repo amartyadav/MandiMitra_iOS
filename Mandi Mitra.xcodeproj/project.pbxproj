@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C338DDDF9A215E15D6D54F5 /* Pods_Mandi_Mitra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35AAE16DE8A1078C5D647F8C /* Pods_Mandi_Mitra.framework */; };
 		B20CE3222B7B1D230015AF4C /* Mandi_MitraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */; };
 		B20CE3242B7B1D230015AF4C /* ViewDetailedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */; };
 		B20CE3262B7B1D230015AF4C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3252B7B1D230015AF4C /* Item.swift */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35AAE16DE8A1078C5D647F8C /* Pods_Mandi_Mitra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mandi_Mitra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A5AC3457058B08456B2EDA8 /* Pods-Mandi Mitra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mandi Mitra.debug.xcconfig"; path = "Target Support Files/Pods-Mandi Mitra/Pods-Mandi Mitra.debug.xcconfig"; sourceTree = "<group>"; };
 		B20CE31E2B7B1D230015AF4C /* Mandi Mitra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mandi Mitra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraApp.swift; sourceTree = "<group>"; };
 		B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailedList.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTotalCalculator.swift; sourceTree = "<group>"; };
 		B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
+		D1EB8E30FEF0243B6971BD94 /* Pods-Mandi Mitra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mandi Mitra.release.xcconfig"; path = "Target Support Files/Pods-Mandi Mitra/Pods-Mandi Mitra.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C338DDDF9A215E15D6D54F5 /* Pods_Mandi_Mitra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		269C98901370E399CF99A99A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35AAE16DE8A1078C5D647F8C /* Pods_Mandi_Mitra.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		804B087C4F74E77DACCA38FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AC3457058B08456B2EDA8 /* Pods-Mandi Mitra.debug.xcconfig */,
+				D1EB8E30FEF0243B6971BD94 /* Pods-Mandi Mitra.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B20CE3152B7B1D230015AF4C = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,8 @@
 				B20CE3352B7B1D260015AF4C /* Mandi MitraTests */,
 				B20CE33F2B7B1D260015AF4C /* Mandi MitraUITests */,
 				B20CE31F2B7B1D230015AF4C /* Products */,
+				804B087C4F74E77DACCA38FB /* Pods */,
+				269C98901370E399CF99A99A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B20CE3462B7B1D260015AF4C /* Build configuration list for PBXNativeTarget "Mandi Mitra" */;
 			buildPhases = (
+				03F18E340143BB20E81486D0 /* [CP] Check Pods Manifest.lock */,
 				B20CE31A2B7B1D230015AF4C /* Sources */,
 				B20CE31B2B7B1D230015AF4C /* Frameworks */,
 				B20CE31C2B7B1D230015AF4C /* Resources */,
@@ -284,6 +309,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03F18E340143BB20E81486D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mandi Mitra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B20CE31A2B7B1D230015AF4C /* Sources */ = {
@@ -457,12 +507,13 @@
 		};
 		B20CE3472B7B1D260015AF4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5AC3457058B08456B2EDA8 /* Pods-Mandi Mitra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Mandi Mitra/Mandi_Mitra.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Mandi Mitra/Preview Content\"";
 				DEVELOPMENT_TEAM = 3T3C5MQZ7B;
 				ENABLE_PREVIEWS = YES;
@@ -496,12 +547,13 @@
 		};
 		B20CE3482B7B1D260015AF4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1EB8E30FEF0243B6971BD94 /* Pods-Mandi Mitra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Mandi Mitra/Mandi_Mitra.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Mandi Mitra/Preview Content\"";
 				DEVELOPMENT_TEAM = 3T3C5MQZ7B;
 				ENABLE_PREVIEWS = YES;
