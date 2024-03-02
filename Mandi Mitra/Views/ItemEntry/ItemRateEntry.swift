@@ -47,6 +47,8 @@ struct ItemRateEntrySection: View {
                     ForEach(ItemEntry.sellingItemUnit.allCases) { unit in
                         Text(unit.rawValue)
                             .foregroundColor(Color.mandiMitraText)
+                            .font(.body)
+                        
                     }
                 }.tint(Color.black)
                 .onTapGesture {
