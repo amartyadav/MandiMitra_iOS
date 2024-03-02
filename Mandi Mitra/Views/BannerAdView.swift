@@ -14,7 +14,7 @@ struct BannerAdView: UIViewRepresentable {
         
         // replace with actual admob ad unit id
 //        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        banner.adUnitID = "ca-app-pub-7871185710478480/9640685674"
+        banner.adUnitID = "ca-app-pub-7871185710478480/8986859805"
         banner.rootViewController = UIApplication.shared.windows.first?.rootViewController
         banner.load(GADRequest())
         
