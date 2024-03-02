@@ -12,7 +12,7 @@ struct Settings: View {
 //            SettingOption(title: "Language", iconName: "globe"),
 //            SettingOption(title: "Rate Us on the App Store", iconName: "star.fill"),
             SettingOption(title: "Release Notes", iconName: "doc.plaintext"),
-            SettingOption(title: "View Website", iconName: "network"),
+            SettingOption(title: "View Developer's Website", iconName: "network"),
 //            SettingOption(title: "Notifications", iconName: "bell.fill"),
             SettingOption(title: "Privacy Policy", iconName: "lock.fill")
         ]
