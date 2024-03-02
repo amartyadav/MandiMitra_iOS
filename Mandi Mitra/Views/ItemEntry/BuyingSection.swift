@@ -76,6 +76,7 @@ struct BuyingSection: View {
                 Button {
                     onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalItemAmount)
                     sellingItemPrice = ""
+                    hideKeyboard()
                 }
             label: {
                     Label("Add To List", systemImage: "plus.circle")
