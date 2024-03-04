@@ -53,6 +53,10 @@ struct ItemEntry: View {
     /// Holds all the items added to the bill
     @State private var itemsList: [ItemDetail] = []
     
+    var viewModel = UPIAppListViewModel()
+
+
+    
     var body: some View {
 
         NavigationStack {
@@ -120,6 +124,9 @@ struct ItemEntry: View {
                             .padding(.top, 25)
                         
                     
+                    UPIView(viewModel: viewModel)
+
+                    
                     Spacer()
                     
                     BannerAdView()
@@ -148,9 +155,3 @@ struct ItemEntry: View {
     }
 
 }
-
-#Preview {
-    
-    ItemEntry()
-}
-

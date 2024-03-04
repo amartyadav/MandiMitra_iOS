@@ -12,6 +12,8 @@ struct ViewDetailedList: View {
     var items: [ItemDetail]
     var totalBillAmount: String
     
+    var viewModel = UPIAppListViewModel()
+
 
     var body: some View {
         NavigationStack {
@@ -65,16 +67,21 @@ struct ViewDetailedList: View {
                 .onAppear {
                             printItemsList()
                         }
-            HStack{
-                Spacer()
-                Text("Total: \u{20B9}")
-                    .foregroundColor(Color.mandiMitraText)
-                    .font(.title)
-                Text(totalBillAmount)
-                    .foregroundColor(Color.mandiMitraText)
-                    .font(.title)
+            VStack{
+                HStack{
+                    Spacer()
+                    Text("Total: \u{20B9}")
+                        .foregroundColor(Color.mandiMitraText)
+                        .font(.title)
+                    Text(totalBillAmount)
+                        .foregroundColor(Color.mandiMitraText)
+                        .font(.title)
+                }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+                UPIView(viewModel: viewModel)
+
             }
-            .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 10))
+            
         }
 //        .frame(width: .infinity, alignment: .leading)
         .background(Color.white)
@@ -85,6 +92,7 @@ struct ViewDetailedList: View {
                         
                     }
                 }
+        
         
         BannerAdView()
             .frame(width: 400, height: 50, alignment: .center)

@@ -197,6 +197,9 @@
         }
       }
     },
+    "Pay Now" : {
+
+    },
     "Select an item" : {
       "extractionState" : "stale",
       "localizations" : {
