@@ -141,7 +141,7 @@ struct ItemEntry: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                             HStack {
-                                Image("final_app_icon") // Replace "appIcon" with your actual icon name
+                                Image("final_app_icon")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 50, height: 50)
@@ -151,7 +151,9 @@ struct ItemEntry: View {
                         }
                     }
             
-        }
+        }.onAppear(perform: {
+            requestNotificationPermission(launchedFrom: "ItemEntry")
+        })
     }
 
 }

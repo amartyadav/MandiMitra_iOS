@@ -27,6 +27,8 @@ struct WelcomeAndName: View {
                     Button("Continue") {
                         UserDefaults.standard.set(userName, forKey: "userName")
                         showingWelcomeAndName = false
+                        requestNotificationPermission(launchedFrom: "WelcomeAndName") // Requesting notification permission
+//                        scheduleTestNotifications(hour: 15, minute: 08, message: "Mandi mitra is fucking fun")
                     }
                     .disabled(userName.isEmpty)
                 }

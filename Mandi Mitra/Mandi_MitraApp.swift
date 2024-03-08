@@ -14,6 +14,7 @@ struct Mandi_MitraApp: App {
     init() {
         // initialise Google ADMob SDK
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+//        requestNotificationPermission()
     }
     
     var body: some Scene {

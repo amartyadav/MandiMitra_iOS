@@ -31,6 +31,7 @@
 		B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */; };
 		B2E3BEA92B95DEDE007DBFE7 /* UPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3BEA82B95DEDE007DBFE7 /* UPIView.swift */; };
 		B2E3BEAC2B95E080007DBFE7 /* UPIIndividualAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3BEAB2B95E080007DBFE7 /* UPIIndividualAppView.swift */; };
+		B2FD0D112B98BA1300A94E81 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FD0D102B98BA1300A94E81 /* NotificationHandler.swift */; };
 		B2FDC2CA2B8A5B4800B8A6A4 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		B2E3BEA82B95DEDE007DBFE7 /* UPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPIView.swift; sourceTree = "<group>"; };
 		B2E3BEAB2B95E080007DBFE7 /* UPIIndividualAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPIIndividualAppView.swift; sourceTree = "<group>"; };
+		B2FD0D102B98BA1300A94E81 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
 		D1EB8E30FEF0243B6971BD94 /* Pods-Mandi Mitra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mandi Mitra.release.xcconfig"; path = "Target Support Files/Pods-Mandi Mitra/Pods-Mandi Mitra.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 			children = (
 				B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */,
 				B26B64E32B9216A6002B7A3D /* Extensions.swift */,
+				B2FD0D102B98BA1300A94E81 /* NotificationHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */,
 				B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */,
 				B26B64E02B92163E002B7A3D /* BuyingSection.swift in Sources */,
+				B2FD0D112B98BA1300A94E81 /* NotificationHandler.swift in Sources */,
 				B28706E32B8F2ABE008B42FE /* WelcomeAndName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
