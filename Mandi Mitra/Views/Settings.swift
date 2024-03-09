@@ -13,7 +13,7 @@ struct Settings: View {
 //            SettingOption(title: "Rate Us on the App Store", iconName: "star.fill"),
             SettingOption(title: "Release Notes", iconName: "doc.plaintext"),
             SettingOption(title: "View Developer's Website", iconName: "network"),
-//            SettingOption(title: "Notifications", iconName: "bell.fill"),
+            SettingOption(title: "Notifications", iconName: "bell.fill"),
             SettingOption(title: "Privacy Policy", iconName: "lock.fill")
         ]
     
@@ -75,6 +75,19 @@ func performAction(for option: SettingOption) {
             UIApplication.shared.open(url)
         }
         
+    case "Notifications":
+        // todo: open the app's notification settings in the phone's settings menu
+        print("Opening Mandi Mitra notification settings in the Settings app")
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString),
+              UIApplication.shared.canOpenURL(settingsUrl) else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(settingsUrl)
+        } else {
+            UIApplication.shared.openURL(settingsUrl)
+        }
     default:
         break
     }
