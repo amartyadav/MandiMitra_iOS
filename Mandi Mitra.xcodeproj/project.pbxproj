@@ -17,9 +17,12 @@
 		B20CE3412B7B1D260015AF4C /* Mandi_MitraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */; };
 		B20CE3432B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */; };
 		B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE34F2B7B27750015AF4C /* ItemEntry.swift */; };
+		B21112E12BA8A7130029FC14 /* UpdateCheckerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21112E02BA8A7130029FC14 /* UpdateCheckerViewModel.swift */; };
+		B21112E32BA8AA2A0029FC14 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21112E22BA8AA2A0029FC14 /* VersionInfo.swift */; };
 		B2428EFC2B89CD820020D3D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2428EFB2B89CD820020D3D1 /* Settings.swift */; };
 		B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2428EFD2B89CE240020D3D1 /* ContentView.swift */; };
 		B2428F002B8A12850020D3D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */; };
+		B24A0B792B9F0362002C1D79 /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A0B782B9F0362002C1D79 /* UpdateChecker.swift */; };
 		B25D5AEC2B919D8E00E5FAA8 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D5AEB2B919D8E00E5FAA8 /* BannerAdView.swift */; };
 		B26B64DE2B921602002B7A3D /* ItemRateEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */; };
 		B26B64E02B92163E002B7A3D /* BuyingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64DF2B92163E002B7A3D /* BuyingSection.swift */; };
@@ -69,9 +72,12 @@
 		B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITests.swift; sourceTree = "<group>"; };
 		B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B20CE34F2B7B27750015AF4C /* ItemEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntry.swift; sourceTree = "<group>"; };
+		B21112E02BA8A7130029FC14 /* UpdateCheckerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheckerViewModel.swift; sourceTree = "<group>"; };
+		B21112E22BA8AA2A0029FC14 /* VersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionInfo.swift; sourceTree = "<group>"; };
 		B2428EFB2B89CD820020D3D1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B2428EFD2B89CE240020D3D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B24A0B782B9F0362002C1D79 /* UpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
 		B25D5AEB2B919D8E00E5FAA8 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRateEntry.swift; sourceTree = "<group>"; };
 		B26B64DF2B92163E002B7A3D /* BuyingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingSection.swift; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		B20CE3202B7B1D230015AF4C /* Mandi Mitra */ = {
 			isa = PBXGroup;
 			children = (
+				B21112DF2BA8A6FB0029FC14 /* ViewModels */,
 				B26B64DC2B921590002B7A3D /* Utilities */,
 				B26B64DA2B921536002B7A3D /* Views */,
 				B26B64D92B921510002B7A3D /* Models */,
@@ -195,11 +202,20 @@
 			path = "Mandi MitraUITests";
 			sourceTree = "<group>";
 		};
+		B21112DF2BA8A6FB0029FC14 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B21112E02BA8A7130029FC14 /* UpdateCheckerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B26B64D92B921510002B7A3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B20CE3252B7B1D230015AF4C /* Item.swift */,
 				B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */,
+				B21112E22BA8AA2A0029FC14 /* VersionInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +252,7 @@
 				B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */,
 				B26B64E32B9216A6002B7A3D /* Extensions.swift */,
 				B2FD0D102B98BA1300A94E81 /* NotificationHandler.swift */,
+				B24A0B782B9F0362002C1D79 /* UpdateChecker.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -408,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E3BEA92B95DEDE007DBFE7 /* UPIView.swift in Sources */,
+				B21112E12BA8A7130029FC14 /* UpdateCheckerViewModel.swift in Sources */,
 				B2FDC2CA2B8A5B4800B8A6A4 /* LanguageSelectionView.swift in Sources */,
 				B2E3BEAC2B95E080007DBFE7 /* UPIIndividualAppView.swift in Sources */,
 				B20CE3242B7B1D230015AF4C /* ViewDetailedList.swift in Sources */,
@@ -417,8 +435,10 @@
 				B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */,
 				B20CE3262B7B1D230015AF4C /* Item.swift in Sources */,
 				B20CE3222B7B1D230015AF4C /* Mandi_MitraApp.swift in Sources */,
+				B24A0B792B9F0362002C1D79 /* UpdateChecker.swift in Sources */,
 				B25D5AEC2B919D8E00E5FAA8 /* BannerAdView.swift in Sources */,
 				B2428EFC2B89CD820020D3D1 /* Settings.swift in Sources */,
+				B21112E32BA8AA2A0029FC14 /* VersionInfo.swift in Sources */,
 				B26B64E42B9216A6002B7A3D /* Extensions.swift in Sources */,
 				B29F09442B94EFCB0016CF7B /* UPIAppListViewModel.swift in Sources */,
 				B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */,
