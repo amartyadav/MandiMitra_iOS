@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingWelcomeAndName = UserDefaults.standard.string(forKey: "userName") == nil
+    
+    @StateObject private var updateCheckerViewModel = UpdateCheckerViewModel()
     var body: some View {
         if showingWelcomeAndName {
             WelcomeAndName(showingWelcomeAndName: $showingWelcomeAndName)
@@ -17,6 +19,9 @@ struct ContentView: View {
             TabView {
                 ItemEntry()
                     .tabItem { Label("Item Entry", systemImage: "list.bullet") }
+                    .onAppear {
+                        updateCheckerViewModel.checkForUpdates()
+                    }
                 
                 Settings()
                     .tabItem({
