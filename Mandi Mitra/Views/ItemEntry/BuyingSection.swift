@@ -13,6 +13,7 @@ struct BuyingSection: View {
     @Binding var selectedSellingUnit: ItemEntry.sellingItemUnit
     @Binding var selectedBuyingQuantity: ItemEntry.buyingQuantity
     @Binding var customKGQuantity: String
+    @Binding var gmQuantity: String
     
     // Add a computed property to determine the additional padding
         var additionalPadding: CGFloat {
@@ -20,7 +21,7 @@ struct BuyingSection: View {
         }
     
     // closure property
-    var onAddItem: (String, ItemEntry.sellingItemUnit, ItemEntry.buyingQuantity, String?, String) -> Void
+    var onAddItem: (String, ItemEntry.sellingItemUnit, ItemEntry.buyingQuantity, String?, String, String?) -> Void
     
     var body: some View {
         // buying section
@@ -73,8 +74,25 @@ struct BuyingSection: View {
                     }
                 }
                 
+                // Gram (g) Input text field
+                if selectedBuyingQuantity == .gram {
+                    HStack{
+                        TextField("gram", text: $gmQuantity)
+                            .padding(.leading, 10)
+                            .frame(width: 100)
+                            .keyboardType(.decimalPad)
+                            .textFieldStyle(.roundedBorder)
+                            .background(Color.mandiMitraPrimary)
+                            .foregroundColor(Color.mandiMitraText)
+
+                        Text("(g)")
+                            .foregroundColor(Color.mandiMitraText)
+
+                    }
+                }
+                
                 Button {
-                    onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalItemAmount)
+                    onAddItem(sellingItemPrice, selectedSellingUnit, selectedBuyingQuantity, customKGQuantity, totalItemAmount, gmQuantity)
                     sellingItemPrice = ""
                     hideKeyboard()
                 }

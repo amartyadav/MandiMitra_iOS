@@ -19,7 +19,7 @@ struct ItemEntry: View {
     @State var sellingItemPrice: String = ""
     /// Enum for all the various quantities that the item is being sold in. For eg. "Rs. 12/paao or Rs. 12/kg"
     enum sellingItemUnit: String, CaseIterable, Identifiable {
-        case KG, Paao
+        case KG, Paao, hundred_gram = "100 g"
         var id: Self {self}
     }
     /// Holds the selected unit that the item is being sold in at the shop. For eg. "Paao" for an item of rate "Rs. 12/paao"
@@ -30,13 +30,15 @@ struct ItemEntry: View {
     // buying section (You Want To Buy) section variables
     /// Enum for all the various quantities that the user can choose to buy for an item
     enum buyingQuantity: String, CaseIterable, Identifiable {
-        case one_paao = "1 Paao", half_kg = "Half KG", three_paao = "3 Paao", one_kg = "1 KG", more_kg = "More KG"
+        case one_paao = "1 Paao", half_kg = "Half KG", three_paao = "3 Paao", one_kg = "1 KG", more_kg = "More KG", gram = "Gram (g)"
         var id: Self {self}
     }
     /// The selected quantity that the suer wishes to buy for a particular item
     @State private var selectedBuyingQuantity: buyingQuantity = .one_paao
     /// Holds the custom KG value if "More KG" is selected as the buying quantity
     @State private var customKGQuantity: String = ""
+    
+    @State private var gmQuantity: String = ""
     
     // ---------------------------------------
     
@@ -82,21 +84,24 @@ struct ItemEntry: View {
                                 selectedSellingUnit: $selectedSellingItemUnit,
                                 selectedBuyingQuantity: $selectedBuyingQuantity,
                                 customKGQuantity: $customKGQuantity,
-                                onAddItem: { price, unit, quantity, customQuantity, _ in
+                                gmQuantity: $gmQuantity,
+                                onAddItem: { price, unit, quantity, customQuantity, _, gmQuantity  in
                                         // Calculate total cost using ItemTotalCalculator
                                         let totalCost = ItemTotalCalculator.calculateItemTotal(
                                             price: price,
                                             sellingQuantityUnitSelected: unit,
                                             buyingQuantityUnitSelected: quantity,
-                                            customQuantity: customQuantity
+                                            customQuantity: customQuantity,
+                                            gmQuantity: gmQuantity
                                         )
                                         
                                         // Create new item detail
                                         let newItem = ItemDetail(
-                                            sellingRate: "\(price)/\(unit.rawValue)",
+                                            sellingRate: " ₹ \(price) / \(unit.rawValue)",
                                             buyingQuantity: quantity.rawValue,
-                                            totalItemAmount: String(totalCost),
-                                            customKGQuantity: customQuantity ?? "0"
+                                            totalItemAmount: "₹ " + String(totalCost),
+                                            customKGQuantity: customQuantity ?? "0",
+                                            gramQuantity: gmQuantity
                                         )
                                         
                                         // Append new item to the list

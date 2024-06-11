@@ -38,6 +38,11 @@ struct ViewDetailedList: View {
                                             .font(.body)
                                             .foregroundColor(Color.mandiMitraText)
                                     }
+                                    else if(item.buyingQuantity == "Gram (g)") {
+                                        Text((item.gramQuantity ?? "") + " g")
+                                            .font(.body)
+                                            .foregroundColor(Color.mandiMitraText)
+                                    }
                                     else {
                                         Text(item.buyingQuantity)
                                             .font(.body)

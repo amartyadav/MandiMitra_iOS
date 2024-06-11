@@ -13,4 +13,5 @@ struct ItemDetail: Identifiable {
     var buyingQuantity: String
     var totalItemAmount: String
     var customKGQuantity: String?
+    var gramQuantity: String?
 }

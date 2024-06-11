@@ -12,6 +12,16 @@
         }
       }
     },
+    "(g)" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ग्राम"
+          }
+        }
+      }
+    },
     "₹" : {
 
     },
@@ -19,7 +29,14 @@
 
     },
     "About" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "और जाने"
+          }
+        }
+      }
     },
     "Add Item" : {
       "extractionState" : "stale",
@@ -28,12 +45,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Item"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
           }
         }
       }
@@ -55,10 +66,24 @@
       }
     },
     "Bill Details" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बिल विवरण"
+          }
+        }
+      }
     },
     "Buying Quantity: " : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मात्रा:"
+          }
+        }
+      }
     },
     "Buying Quantity: %@" : {
       "extractionState" : "stale",
@@ -72,13 +97,20 @@
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "मात्रा:"
+            "value" : "मात्रा: %@"
           }
         }
       }
     },
     "Continue" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जारी रखें"
+          }
+        }
+      }
     },
     "Desired Quantity" : {
       "extractionState" : "stale",
@@ -114,7 +146,14 @@
       }
     },
     "Enter your name" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अपना नाम लिखें"
+          }
+        }
+      }
     },
     "enter_item_rate" : {
       "extractionState" : "manual",
@@ -133,8 +172,25 @@
         }
       }
     },
+    "gram" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ग्राम"
+          }
+        }
+      }
+    },
     "Hello, %@" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नमस्ते, %@"
+          }
+        }
+      }
     },
     "Item Entry" : {
       "localizations" : {
@@ -147,7 +203,7 @@
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "आइटम प्रविष्टि"
           }
         }
       }
@@ -201,10 +257,24 @@
       }
     },
     "New Version Available" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नया अपडेट उपलब्ध"
+          }
+        }
+      }
     },
     "Pay Now" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भुगतान करें"
+          }
+        }
+      }
     },
     "Select an item" : {
       "extractionState" : "stale",
@@ -224,7 +294,14 @@
       }
     },
     "Selling Rate: " : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भाव:"
+          }
+        }
+      }
     },
     "Selling Rate: %@" : {
       "extractionState" : "stale",
@@ -238,7 +315,7 @@
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "भाव: "
+            "value" : "भाव: %@"
           }
         }
       }
@@ -261,7 +338,14 @@
       }
     },
     "Total Item Amount: " : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कुल:"
+          }
+        }
+      }
     },
     "Total Item Amount: %@" : {
       "extractionState" : "stale",
@@ -313,10 +397,24 @@
       }
     },
     "Update Later" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बाद में"
+          }
+        }
+      }
     },
     "Update Now" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अपडेट करें"
+          }
+        }
+      }
     },
     "View Bill" : {
       "localizations" : {

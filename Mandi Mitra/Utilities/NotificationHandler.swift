@@ -37,7 +37,17 @@ func scheduleNotifications() {
         "Skip the mental maths while buying sabzi at the mandi. Open Mandi Mitra now!",
         "Mandi Mitra at your service for the smartest Sabzi shopping experience!",
         "Never overpay for your Sabzi again. Check the rates on Mandi Mitra!",
-        "Sabzi waale bhaiya telling the rate in kilo when you only want a paao? Use Mandi Mitra to simplify the experience!"
+        "Sabzi waale bhaiya telling the rate in kilo when you only want a paao? Use Mandi Mitra to simplify the experience!",
+        "Ready for some sabzi shopping? Let Mandi Mitra handle the math for you!",
+        "Heading to the sabzi mandi? Make it effortless with Mandi Mitra by your side!",
+        "Mandi shopping just got smarter. Use Mandi Mitra for accurate sabzi calculations!",
+        "Save time and money at the sabzi mandi with Mandi Mitra!",
+        "Tired of haggling over sabzi prices? Let Mandi Mitra do the calculations!",
+        "Your sabzi shopping assistant is here! Open Mandi Mitra at the mandi!",
+        "Stay ahead of the game at the sabzi mandi. Use Mandi Mitra for instant price calculations!",
+        "No more guesswork at the sabzi mandi. Mandi Mitra gives you the exact costs!",
+        "Simplify your sabzi shopping experience with Mandi Mitra!",
+        "Mandi Mitra ensures you never overpay for your sabzi again. Check it out now!"
     ]
     
     for i in 0..<notificationHours.count {
