@@ -1,17 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        }
-      }
-    },
     "(g)" : {
       "localizations" : {
         "hi" : {
@@ -23,10 +12,68 @@
       }
     },
     "₹" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "₹"
+          }
+        }
+      }
+    },
+    "1 KG" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 किलो"
+          }
+        }
+      }
+    },
+    "1 Paao" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 पाव"
+          }
+        }
+      }
+    },
+    "3 Paao" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 पाव"
+          }
+        }
+      }
+    },
+    "100 g" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100 ग्राम"
+          }
+        }
+      }
     },
     "A new version of Mandi Mitra is available!🔥\nUpdate now for the latest features 😍" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मंडी मित्र का अपडेट उपलब्ध है!🔥 नई सुविधाओं के लिए अभी अपडेट करें 😍"
+          }
+        }
+      }
     },
     "About" : {
       "localizations" : {
@@ -34,17 +81,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "और जाने"
-          }
-        }
-      }
-    },
-    "Add Item" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add Item"
           }
         }
       }
@@ -85,46 +121,12 @@
         }
       }
     },
-    "Buying Quantity: %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buying Quantity: "
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मात्रा: %@"
-          }
-        }
-      }
-    },
     "Continue" : {
       "localizations" : {
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "जारी रखें"
-          }
-        }
-      }
-    },
-    "Desired Quantity" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desired Quantity"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "कितना ख़रीदना है?"
           }
         }
       }
@@ -182,6 +184,28 @@
         }
       }
     },
+    "Gram (g)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ग्राम"
+          }
+        }
+      }
+    },
+    "Half KG" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आधा किलो"
+          }
+        }
+      }
+    },
     "Hello, %@" : {
       "localizations" : {
         "hi" : {
@@ -224,6 +248,16 @@
         }
       }
     },
+    "Language" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भाषा"
+          }
+        }
+      }
+    },
     "Mandi Mitra" : {
       "localizations" : {
         "en" : {
@@ -235,7 +269,7 @@
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "मंडी मित्र"
           }
         }
       }
@@ -266,6 +300,27 @@
         }
       }
     },
+    "Notifications" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नोटिफिकेशन"
+          }
+        }
+      }
+    },
+    "Paao" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पाव"
+          }
+        }
+      }
+    },
     "Pay Now" : {
       "localizations" : {
         "hi" : {
@@ -276,19 +331,32 @@
         }
       }
     },
-    "Select an item" : {
-      "extractionState" : "stale",
+    "Privacy Policy" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select an item"
-          }
-        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "गोपनीयता नीति"
+          }
+        }
+      }
+    },
+    "Rate Us on the App Store" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ऐप स्टोर पर रेट करें "
+          }
+        }
+      }
+    },
+    "Release Notes" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "संस्करण नोट्स"
           }
         }
       }
@@ -303,36 +371,12 @@
         }
       }
     },
-    "Selling Rate: %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Selling Rate:"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "भाव: %@"
-          }
-        }
-      }
-    },
     "Settings" : {
-      "extractionState" : "stale",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
-          }
-        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सेटिंग"
+            "value" : "सेटिंग्स"
           }
         }
       }
@@ -343,23 +387,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "कुल:"
-          }
-        }
-      }
-    },
-    "Total Item Amount: %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total Item Amount: ₹"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "कुल: ₹"
           }
         }
       }
@@ -432,8 +459,25 @@
         }
       }
     },
+    "View Developer's Website" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डेवलपर की वेबसाइट देखें"
+          }
+        }
+      }
+    },
     "Welcome to Mandi Mitra" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मंडी मित्र में आपका स्वागत है"
+          }
+        }
+      }
     },
     "You Want To Buy" : {
       "localizations" : {

@@ -45,7 +45,7 @@ struct ItemRateEntrySection: View {
                 }
                 Picker("Unit", selection: $selectedSellingItemUnit) {
                     ForEach(ItemEntry.sellingItemUnit.allCases) { unit in
-                        Text(unit.rawValue)
+                        Text(unit.localizedString())
                             .foregroundColor(Color.mandiMitraText)
                             .font(.body)
                         

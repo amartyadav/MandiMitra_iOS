@@ -19,8 +19,13 @@ struct ItemEntry: View {
     @State var sellingItemPrice: String = ""
     /// Enum for all the various quantities that the item is being sold in. For eg. "Rs. 12/paao or Rs. 12/kg"
     enum sellingItemUnit: String, CaseIterable, Identifiable {
-        case KG, Paao, hundred_gram = "100 g"
+        case KG = "KG", Paao = "Paao", hundred_gram = "100 g"
+        
         var id: Self {self}
+        
+        func localizedString() -> String {
+                return NSLocalizedString(self.rawValue, comment: "")
+        }
     }
     /// Holds the selected unit that the item is being sold in at the shop. For eg. "Paao" for an item of rate "Rs. 12/paao"
     @State private var selectedSellingItemUnit: sellingItemUnit = .Paao
@@ -31,7 +36,12 @@ struct ItemEntry: View {
     /// Enum for all the various quantities that the user can choose to buy for an item
     enum buyingQuantity: String, CaseIterable, Identifiable {
         case one_paao = "1 Paao", half_kg = "Half KG", three_paao = "3 Paao", one_kg = "1 KG", more_kg = "More KG", gram = "Gram (g)"
+        
         var id: Self {self}
+        
+        func localizedString() -> String {
+                return NSLocalizedString(self.rawValue, comment: "")
+        }
     }
     /// The selected quantity that the suer wishes to buy for a particular item
     @State private var selectedBuyingQuantity: buyingQuantity = .one_paao
@@ -97,8 +107,8 @@ struct ItemEntry: View {
                                         
                                         // Create new item detail
                                         let newItem = ItemDetail(
-                                            sellingRate: " ₹ \(price) / \(unit.rawValue)",
-                                            buyingQuantity: quantity.rawValue,
+                                            sellingRate: " ₹ \(price) / \(unit.localizedString())",
+                                            buyingQuantity: quantity.localizedString(),
                                             totalItemAmount: "₹ " + String(totalCost),
                                             customKGQuantity: customQuantity ?? "0",
                                             gramQuantity: gmQuantity

@@ -40,7 +40,7 @@ struct BuyingSection: View {
                         HStack{
                             Picker("Unit", selection: $selectedBuyingQuantity) {
                                 ForEach(ItemEntry.buyingQuantity.allCases) { unit in
-                                    Text(unit.rawValue)
+                                    Text(unit.localizedString())
                                         .foregroundColor(Color.mandiMitraText)
 
                                 }
