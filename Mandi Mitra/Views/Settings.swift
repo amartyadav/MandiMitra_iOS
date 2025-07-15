@@ -30,10 +30,6 @@ struct Settings: View {
             .listStyle(PlainListStyle()) // Use PlainListStyle for more control over appearance
             .background(Color.white) // Set the background color of the NavigationStack
             .navigationTitle(NSLocalizedString("Settings", comment: ""))
-            
-            BannerAdView()
-                .frame(width: 400, height: 50, alignment: .center)
-                .background(Color.white)
         }
     }
 }
@@ -52,12 +48,8 @@ func performAction(for option: SettingOption) {
         } else {
             UIApplication.shared.openURL(settingsUrl)
         }
-    case NSLocalizedString("Rate Us on the App Store", comment: ""):
-        if let url = URL(string: "https://apps.apple.com/in/app/google-chrome/id535886823") {
-            UIApplication.shared.open(url)
-        }
     case NSLocalizedString("View Developer's Website", comment: ""):
-        if let url = URL(string: "https://amartyadav.tech/") {
+        if let url = URL(string: "https://amartyadav.com/") {
             UIApplication.shared.open(url)
         }
     case NSLocalizedString("Release Notes", comment: ""):

@@ -97,11 +97,6 @@ struct ViewDetailedList: View {
                         
                     }
                 }
-        
-        
-        BannerAdView()
-            .frame(width: 400, height: 50, alignment: .center)
-            .background(Color.white)
 
     }
     

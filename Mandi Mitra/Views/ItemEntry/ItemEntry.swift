@@ -9,11 +9,6 @@ import SwiftUI
 
 
 struct ItemEntry: View {
-//    init() {
-//        UINavigationBar.appearance().backgroundColor = UIColor.systemBlue
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-//    }
     // selling section (Enter Item Rate) section variables
     /// The price at which the item is being sold (only the numerical value without the quantity of the rate)
     @State var sellingItemPrice: String = ""
@@ -140,14 +135,6 @@ struct ItemEntry: View {
                         
                     
                     UPIView(viewModel: viewModel)
-
-                    
-                    Spacer()
-                    
-                    BannerAdView()
-                        .frame(width: 400, height: 50, alignment: .center)
-                        .background(Color.white)
-
                 }
             }     
             .padding(.top, 10) // Adjust the value to create desired space

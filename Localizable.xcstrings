@@ -66,6 +66,7 @@
       }
     },
     "A new version of Mandi Mitra is available!🔥\nUpdate now for the latest features 😍" : {
+      "extractionState" : "stale",
       "localizations" : {
         "hi" : {
           "stringUnit" : {
@@ -291,6 +292,7 @@
       }
     },
     "New Version Available" : {
+      "extractionState" : "stale",
       "localizations" : {
         "hi" : {
           "stringUnit" : {
@@ -342,6 +344,7 @@
       }
     },
     "Rate Us on the App Store" : {
+      "extractionState" : "stale",
       "localizations" : {
         "hi" : {
           "stringUnit" : {
@@ -424,6 +427,7 @@
       }
     },
     "Update Later" : {
+      "extractionState" : "stale",
       "localizations" : {
         "hi" : {
           "stringUnit" : {
@@ -434,6 +438,7 @@
       }
     },
     "Update Now" : {
+      "extractionState" : "stale",
       "localizations" : {
         "hi" : {
           "stringUnit" : {
