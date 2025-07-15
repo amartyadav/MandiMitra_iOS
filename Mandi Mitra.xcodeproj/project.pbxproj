@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B20CE3222B7B1D230015AF4C /* Mandi_MitraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */; };
+		B20CE3242B7B1D230015AF4C /* ViewDetailedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */; };
+		B20CE3262B7B1D230015AF4C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3252B7B1D230015AF4C /* Item.swift */; };
+		B20CE3282B7B1D260015AF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20CE3272B7B1D260015AF4C /* Assets.xcassets */; };
+		B20CE32B2B7B1D260015AF4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20CE32A2B7B1D260015AF4C /* Preview Assets.xcassets */; };
+		B20CE3372B7B1D260015AF4C /* Mandi_MitraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3362B7B1D260015AF4C /* Mandi_MitraTests.swift */; };
+		B20CE3412B7B1D260015AF4C /* Mandi_MitraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */; };
+		B20CE3432B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */; };
+		B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE34F2B7B27750015AF4C /* ItemEntry.swift */; };
+		B21112E32BA8AA2A0029FC14 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21112E22BA8AA2A0029FC14 /* VersionInfo.swift */; };
+		B2428EFC2B89CD820020D3D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2428EFB2B89CD820020D3D1 /* Settings.swift */; };
+		B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2428EFD2B89CE240020D3D1 /* ContentView.swift */; };
+		B2428F002B8A12850020D3D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */; };
+		B26B64DE2B921602002B7A3D /* ItemRateEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */; };
+		B26B64E02B92163E002B7A3D /* BuyingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64DF2B92163E002B7A3D /* BuyingSection.swift */; };
+		B26B64E22B921662002B7A3D /* TotalSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64E12B921662002B7A3D /* TotalSection.swift */; };
+		B26B64E42B9216A6002B7A3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B64E32B9216A6002B7A3D /* Extensions.swift */; };
+		B28706E32B8F2ABE008B42FE /* WelcomeAndName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28706E22B8F2ABE008B42FE /* WelcomeAndName.swift */; };
+		B29F09442B94EFCB0016CF7B /* UPIAppListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F09432B94EFCB0016CF7B /* UPIAppListViewModel.swift */; };
+		B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */; };
+		B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */; };
+		B2E3BEA92B95DEDE007DBFE7 /* UPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3BEA82B95DEDE007DBFE7 /* UPIView.swift */; };
+		B2E3BEAC2B95E080007DBFE7 /* UPIIndividualAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3BEAB2B95E080007DBFE7 /* UPIIndividualAppView.swift */; };
+		B2FD0D112B98BA1300A94E81 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FD0D102B98BA1300A94E81 /* NotificationHandler.swift */; };
+		B2FDC2CA2B8A5B4800B8A6A4 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B20CE3332B7B1D260015AF4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B20CE3162B7B1D230015AF4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B20CE31D2B7B1D230015AF4C;
+			remoteInfo = "Mandi Mitra";
+		};
+		B20CE33D2B7B1D260015AF4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B20CE3162B7B1D230015AF4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B20CE31D2B7B1D230015AF4C;
+			remoteInfo = "Mandi Mitra";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B20CE31E2B7B1D230015AF4C /* Mandi Mitra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mandi Mitra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraApp.swift; sourceTree = "<group>"; };
+		B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailedList.swift; sourceTree = "<group>"; };
+		B20CE3252B7B1D230015AF4C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B20CE3272B7B1D260015AF4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B20CE32A2B7B1D260015AF4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B20CE32C2B7B1D260015AF4C /* Mandi_Mitra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mandi_Mitra.entitlements; sourceTree = "<group>"; };
+		B20CE32D2B7B1D260015AF4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20CE3322B7B1D260015AF4C /* Mandi MitraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mandi MitraTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20CE3362B7B1D260015AF4C /* Mandi_MitraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraTests.swift; sourceTree = "<group>"; };
+		B20CE33C2B7B1D260015AF4C /* Mandi MitraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mandi MitraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITests.swift; sourceTree = "<group>"; };
+		B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandi_MitraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B20CE34F2B7B27750015AF4C /* ItemEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntry.swift; sourceTree = "<group>"; };
+		B21112E22BA8AA2A0029FC14 /* VersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionInfo.swift; sourceTree = "<group>"; };
+		B2428EFB2B89CD820020D3D1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B2428EFD2B89CE240020D3D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRateEntry.swift; sourceTree = "<group>"; };
+		B26B64DF2B92163E002B7A3D /* BuyingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingSection.swift; sourceTree = "<group>"; };
+		B26B64E12B921662002B7A3D /* TotalSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSection.swift; sourceTree = "<group>"; };
+		B26B64E32B9216A6002B7A3D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B28706E22B8F2ABE008B42FE /* WelcomeAndName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAndName.swift; sourceTree = "<group>"; };
+		B29F09432B94EFCB0016CF7B /* UPIAppListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPIAppListViewModel.swift; sourceTree = "<group>"; };
+		B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTotalCalculator.swift; sourceTree = "<group>"; };
+		B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		B2E3BEA82B95DEDE007DBFE7 /* UPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPIView.swift; sourceTree = "<group>"; };
+		B2E3BEAB2B95E080007DBFE7 /* UPIIndividualAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPIIndividualAppView.swift; sourceTree = "<group>"; };
+		B2FD0D102B98BA1300A94E81 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B20CE31B2B7B1D230015AF4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20CE32F2B7B1D260015AF4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20CE3392B7B1D260015AF4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B20CE3152B7B1D230015AF4C = {
+			isa = PBXGroup;
+			children = (
+				B2428EFF2B8A12850020D3D1 /* Localizable.xcstrings */,
+				B20CE3202B7B1D230015AF4C /* Mandi Mitra */,
+				B20CE3352B7B1D260015AF4C /* Mandi MitraTests */,
+				B20CE33F2B7B1D260015AF4C /* Mandi MitraUITests */,
+				B20CE31F2B7B1D230015AF4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B20CE31F2B7B1D230015AF4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE31E2B7B1D230015AF4C /* Mandi Mitra.app */,
+				B20CE3322B7B1D260015AF4C /* Mandi MitraTests.xctest */,
+				B20CE33C2B7B1D260015AF4C /* Mandi MitraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B20CE3202B7B1D230015AF4C /* Mandi Mitra */ = {
+			isa = PBXGroup;
+			children = (
+				B26B64DC2B921590002B7A3D /* Utilities */,
+				B26B64DA2B921536002B7A3D /* Views */,
+				B26B64D92B921510002B7A3D /* Models */,
+				B20CE3212B7B1D230015AF4C /* Mandi_MitraApp.swift */,
+				B20CE3272B7B1D260015AF4C /* Assets.xcassets */,
+				B20CE32C2B7B1D260015AF4C /* Mandi_Mitra.entitlements */,
+				B20CE32D2B7B1D260015AF4C /* Info.plist */,
+				B20CE3292B7B1D260015AF4C /* Preview Content */,
+				B29F09432B94EFCB0016CF7B /* UPIAppListViewModel.swift */,
+			);
+			path = "Mandi Mitra";
+			sourceTree = "<group>";
+		};
+		B20CE3292B7B1D260015AF4C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE32A2B7B1D260015AF4C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B20CE3352B7B1D260015AF4C /* Mandi MitraTests */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE3362B7B1D260015AF4C /* Mandi_MitraTests.swift */,
+			);
+			path = "Mandi MitraTests";
+			sourceTree = "<group>";
+		};
+		B20CE33F2B7B1D260015AF4C /* Mandi MitraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE3402B7B1D260015AF4C /* Mandi_MitraUITests.swift */,
+				B20CE3422B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift */,
+			);
+			path = "Mandi MitraUITests";
+			sourceTree = "<group>";
+		};
+		B26B64D92B921510002B7A3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE3252B7B1D230015AF4C /* Item.swift */,
+				B2E35B1C2B84931D00C3D3C6 /* ItemDetail.swift */,
+				B21112E22BA8AA2A0029FC14 /* VersionInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B26B64DA2B921536002B7A3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2E3BEAA2B95E05A007DBFE7 /* UPI */,
+				B2FDC2C92B8A5B4800B8A6A4 /* LanguageSelectionView.swift */,
+				B2428EFB2B89CD820020D3D1 /* Settings.swift */,
+				B28706E22B8F2ABE008B42FE /* WelcomeAndName.swift */,
+				B20CE3232B7B1D230015AF4C /* ViewDetailedList.swift */,
+				B26B64DB2B921554002B7A3D /* ItemEntry */,
+				B2428EFD2B89CE240020D3D1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B26B64DB2B921554002B7A3D /* ItemEntry */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE34F2B7B27750015AF4C /* ItemEntry.swift */,
+				B26B64DD2B921602002B7A3D /* ItemRateEntry.swift */,
+				B26B64DF2B92163E002B7A3D /* BuyingSection.swift */,
+				B26B64E12B921662002B7A3D /* TotalSection.swift */,
+			);
+			path = ItemEntry;
+			sourceTree = "<group>";
+		};
+		B26B64DC2B921590002B7A3D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B2CA442A2B8390BC00DEC913 /* ItemTotalCalculator.swift */,
+				B26B64E32B9216A6002B7A3D /* Extensions.swift */,
+				B2FD0D102B98BA1300A94E81 /* NotificationHandler.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B2E3BEAA2B95E05A007DBFE7 /* UPI */ = {
+			isa = PBXGroup;
+			children = (
+				B2E3BEA82B95DEDE007DBFE7 /* UPIView.swift */,
+				B2E3BEAB2B95E080007DBFE7 /* UPIIndividualAppView.swift */,
+			);
+			path = UPI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B20CE31D2B7B1D230015AF4C /* Mandi Mitra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B20CE3462B7B1D260015AF4C /* Build configuration list for PBXNativeTarget "Mandi Mitra" */;
+			buildPhases = (
+				B20CE31A2B7B1D230015AF4C /* Sources */,
+				B20CE31B2B7B1D230015AF4C /* Frameworks */,
+				B20CE31C2B7B1D230015AF4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mandi Mitra";
+			productName = "Mandi Mitra";
+			productReference = B20CE31E2B7B1D230015AF4C /* Mandi Mitra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B20CE3312B7B1D260015AF4C /* Mandi MitraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B20CE3492B7B1D260015AF4C /* Build configuration list for PBXNativeTarget "Mandi MitraTests" */;
+			buildPhases = (
+				B20CE32E2B7B1D260015AF4C /* Sources */,
+				B20CE32F2B7B1D260015AF4C /* Frameworks */,
+				B20CE3302B7B1D260015AF4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B20CE3342B7B1D260015AF4C /* PBXTargetDependency */,
+			);
+			name = "Mandi MitraTests";
+			productName = "Mandi MitraTests";
+			productReference = B20CE3322B7B1D260015AF4C /* Mandi MitraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B20CE33B2B7B1D260015AF4C /* Mandi MitraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B20CE34C2B7B1D260015AF4C /* Build configuration list for PBXNativeTarget "Mandi MitraUITests" */;
+			buildPhases = (
+				B20CE3382B7B1D260015AF4C /* Sources */,
+				B20CE3392B7B1D260015AF4C /* Frameworks */,
+				B20CE33A2B7B1D260015AF4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B20CE33E2B7B1D260015AF4C /* PBXTargetDependency */,
+			);
+			name = "Mandi MitraUITests";
+			productName = "Mandi MitraUITests";
+			productReference = B20CE33C2B7B1D260015AF4C /* Mandi MitraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B20CE3162B7B1D230015AF4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					B20CE31D2B7B1D230015AF4C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					B20CE3312B7B1D260015AF4C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = B20CE31D2B7B1D230015AF4C;
+					};
+					B20CE33B2B7B1D260015AF4C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = B20CE31D2B7B1D230015AF4C;
+					};
+				};
+			};
+			buildConfigurationList = B20CE3192B7B1D230015AF4C /* Build configuration list for PBXProject "Mandi Mitra" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				hi,
+			);
+			mainGroup = B20CE3152B7B1D230015AF4C;
+			productRefGroup = B20CE31F2B7B1D230015AF4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B20CE31D2B7B1D230015AF4C /* Mandi Mitra */,
+				B20CE3312B7B1D260015AF4C /* Mandi MitraTests */,
+				B20CE33B2B7B1D260015AF4C /* Mandi MitraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B20CE31C2B7B1D230015AF4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20CE32B2B7B1D260015AF4C /* Preview Assets.xcassets in Resources */,
+				B20CE3282B7B1D260015AF4C /* Assets.xcassets in Resources */,
+				B2428F002B8A12850020D3D1 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20CE3302B7B1D260015AF4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20CE33A2B7B1D260015AF4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B20CE31A2B7B1D230015AF4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E3BEA92B95DEDE007DBFE7 /* UPIView.swift in Sources */,
+				B2FDC2CA2B8A5B4800B8A6A4 /* LanguageSelectionView.swift in Sources */,
+				B2E3BEAC2B95E080007DBFE7 /* UPIIndividualAppView.swift in Sources */,
+				B20CE3242B7B1D230015AF4C /* ViewDetailedList.swift in Sources */,
+				B26B64E22B921662002B7A3D /* TotalSection.swift in Sources */,
+				B2E35B1D2B84931D00C3D3C6 /* ItemDetail.swift in Sources */,
+				B26B64DE2B921602002B7A3D /* ItemRateEntry.swift in Sources */,
+				B2428EFE2B89CE240020D3D1 /* ContentView.swift in Sources */,
+				B20CE3262B7B1D230015AF4C /* Item.swift in Sources */,
+				B20CE3222B7B1D230015AF4C /* Mandi_MitraApp.swift in Sources */,
+				B2428EFC2B89CD820020D3D1 /* Settings.swift in Sources */,
+				B21112E32BA8AA2A0029FC14 /* VersionInfo.swift in Sources */,
+				B26B64E42B9216A6002B7A3D /* Extensions.swift in Sources */,
+				B29F09442B94EFCB0016CF7B /* UPIAppListViewModel.swift in Sources */,
+				B20CE3502B7B27750015AF4C /* ItemEntry.swift in Sources */,
+				B2CA442B2B8390BC00DEC913 /* ItemTotalCalculator.swift in Sources */,
+				B26B64E02B92163E002B7A3D /* BuyingSection.swift in Sources */,
+				B2FD0D112B98BA1300A94E81 /* NotificationHandler.swift in Sources */,
+				B28706E32B8F2ABE008B42FE /* WelcomeAndName.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20CE32E2B7B1D260015AF4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20CE3372B7B1D260015AF4C /* Mandi_MitraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20CE3382B7B1D260015AF4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20CE3432B7B1D260015AF4C /* Mandi_MitraUITestsLaunchTests.swift in Sources */,
+				B20CE3412B7B1D260015AF4C /* Mandi_MitraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B20CE3342B7B1D260015AF4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B20CE31D2B7B1D230015AF4C /* Mandi Mitra */;
+			targetProxy = B20CE3332B7B1D260015AF4C /* PBXContainerItemProxy */;
+		};
+		B20CE33E2B7B1D260015AF4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B20CE31D2B7B1D230015AF4C /* Mandi Mitra */;
+			targetProxy = B20CE33D2B7B1D260015AF4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B20CE3442B7B1D260015AF4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3T3C5MQZ7B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B20CE3452B7B1D260015AF4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3T3C5MQZ7B;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B20CE3472B7B1D260015AF4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mandi Mitra/Mandi_Mitra.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mandi Mitra/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mandi Mitra/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mandi Mitra";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 Amartya Yadav";
+				"INFOPLIST_KEY_NSHumanReadableCopyright[sdk=*]" = "2024 Amartya Yadav";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-Mitra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B20CE3482B7B1D260015AF4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mandi Mitra/Mandi_Mitra.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mandi Mitra/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mandi Mitra/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mandi Mitra";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 Amartya Yadav";
+				"INFOPLIST_KEY_NSHumanReadableCopyright[sdk=*]" = "2024 Amartya Yadav";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-Mitra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B20CE34A2B7B1D260015AF4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-MitraTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mandi Mitra.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mandi Mitra";
+			};
+			name = Debug;
+		};
+		B20CE34B2B7B1D260015AF4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-MitraTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mandi Mitra.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mandi Mitra";
+			};
+			name = Release;
+		};
+		B20CE34D2B7B1D260015AF4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-MitraUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mandi Mitra";
+			};
+			name = Debug;
+		};
+		B20CE34E2B7B1D260015AF4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aatmamartya.Mandi-MitraUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mandi Mitra";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B20CE3192B7B1D230015AF4C /* Build configuration list for PBXProject "Mandi Mitra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20CE3442B7B1D260015AF4C /* Debug */,
+				B20CE3452B7B1D260015AF4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B20CE3462B7B1D260015AF4C /* Build configuration list for PBXNativeTarget "Mandi Mitra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20CE3472B7B1D260015AF4C /* Debug */,
+				B20CE3482B7B1D260015AF4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B20CE3492B7B1D260015AF4C /* Build configuration list for PBXNativeTarget "Mandi MitraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20CE34A2B7B1D260015AF4C /* Debug */,
+				B20CE34B2B7B1D260015AF4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B20CE34C2B7B1D260015AF4C /* Build configuration list for PBXNativeTarget "Mandi MitraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20CE34D2B7B1D260015AF4C /* Debug */,
+				B20CE34E2B7B1D260015AF4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B20CE3162B7B1D230015AF4C /* Project object */;
+}
